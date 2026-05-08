@@ -95,7 +95,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     child: SwitchListTile(
       title: Text(title, style: const TextStyle(color: AppTheme.textPrimary, fontSize: 13)),
       subtitle: Text(subtitle, style: const TextStyle(color: AppTheme.textMuted, fontSize: 11)),
-      value: value, onChanged: (_) => onChanged(), dense: true,
+      value: value, onChanged: (v) => onChanged(v), dense: true,
       activeColor: AppTheme.aksumGold,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
     ),
