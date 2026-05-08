@@ -1,0 +1,72 @@
+[
+  {
+    "id": "aksumite",
+    "name": "Aksumite Empire",
+    "amharic_name": "አክሱም",
+    "start_year": 100,
+    "end_year": 960,
+    "description": "One of the great powers of the ancient world, rivaling Rome, Persia, and China. The Aksumite Empire dominated the Red Sea trade routes and was the first African kingdom to mint its own coins and adopt Christianity as a state religion.",
+    "color": "0xffd4a843",
+    "chapter_ids": ["ch_aksumite_001", "ch_aksumite_002", "ch_aksumite_003"]
+  },
+  {
+    "id": "zagwe",
+    "name": "Zagwe Dynasty",
+    "amharic_name": "ዛግዌ",
+    "start_year": 1137,
+    "end_year": 1270,
+    "description": "The Zagwe dynasty ruled from Lalibela, where they carved eleven monolithic churches out of solid rock — one of the architectural wonders of the medieval world.",
+    "color": "0xff7b68ee",
+    "chapter_ids": ["ch_zagwe_001"]
+  },
+  {
+    "id": "solomonic",
+    "name": "Solomonic Dynasty",
+    "amharic_name": "ሰለሞናዊ",
+    "start_year": 1270,
+    "end_year": 1769,
+    "description": "Claiming descent from King Solomon and the Queen of Sheba, the Solomonic dynasty ruled Ethiopia for over 500 years, producing emperors, saints, and legends.",
+    "color": "0xffc41e3a",
+    "chapter_ids": ["ch_solomonic_001", "ch_solomonic_002"]
+  },
+  {
+    "id": "gondarine",
+    "name": "Gondarine Period",
+    "amharic_name": "ጎንደር",
+    "start_year": 1636,
+    "end_year": 1769,
+    "description": "Emperor Fasilides established Gondar as Ethiopia's permanent capital — a city of palaces, libraries, and churches that earned it the name 'the Camelot of Africa.'",
+    "color": "0xffe8a838",
+    "chapter_ids": ["ch_gondarine_001"]
+  },
+  {
+    "id": "zemene",
+    "name": "Zemene Mesafint",
+    "amharic_name": "ዘመነ መሳፍንት",
+    "start_year": 1769,
+    "end_year": 1855,
+    "description": "The 'Era of Princes' — a century of civil war and regional warlords that nearly tore Ethiopia apart, ending with the rise of Emperor Tewodros II.",
+    "color": "0xff8b6914",
+    "chapter_ids": ["ch_zemene_001"]
+  },
+  {
+    "id": "modern",
+    "name": "Modern Ethiopia",
+    "amharic_name": "ዘመናዊ ኢትዮጵያ",
+    "start_year": 1855,
+    "end_year": 2026,
+    "description": "From the unification under Tewodros to the Battle of Adwa, the reign of Haile Selassie, the Derg, and the Federal Republic — Ethiopia's modern history is a story of resilience and transformation.",
+    "color": "0xff2e7d32",
+    "chapter_ids": ["ch_modern_001", "ch_modern_002", "ch_modern_003"]
+  },
+  {
+    "id": "adwa",
+    "name": "The Battle of Adwa",
+    "amharic_name": "የዓድዋ ጦርነት",
+    "start_year": 1895,
+    "end_year": 1896,
+    "description": "On March 1, 1896, Ethiopian forces under Emperor Menelik II decisively defeated the Italian army at Adwa — the first time an African nation defeated a European colonial power in a major battle.",
+    "color": "0xff8b0000",
+    "chapter_ids": ["ch_adwa_001"]
+  }
+]

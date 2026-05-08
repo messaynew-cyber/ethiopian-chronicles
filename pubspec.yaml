@@ -1,0 +1,25 @@
+name: ethiopian_chronicles
+description: Ethiopian Chronicles — Interactive history of Ethiopia, from Aksum to Adwa and beyond.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^6.1.0
+  shimmer: ^3.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/eras.json
+    - assets/battles.json
+    - assets/chapters_index.json
+    - assets/chapters/

@@ -1,0 +1,8 @@
+build/
+.dart_tool/
+.packages
+*.iml
+.gradle/
+local.properties
+*.apk
+*.aab
