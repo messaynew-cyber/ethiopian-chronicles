@@ -50,18 +50,7 @@ class _ChapterScreenState extends State<ChapterScreen> with TickerProviderStateM
     final max = _scrollController.position.maxScrollExtent;
     if (max > 0) setState(() => _progress = (_scrollController.offset / max).clamp(0.0, 1.0));
   }
-
-  @override
-  void dispose() {
-    _scrollController.removeListener(_onScroll);
-    _scrollController.dispose();
-    _sectionAnimCtrl.dispose();
-    _headerAnimCtrl.dispose();
-    if (_isSpeaking) _ttsChannel.invokeMethod('stop');
-    super.dispose();
-  }
-
-  void _onScroll() {
+void _onScroll() {
     final max = _scrollController.position.maxScrollExtent;
     if (max > 0) setState(() => _progress = (_scrollController.offset / max).clamp(0.0, 1.0));
   }
@@ -400,14 +389,7 @@ class _PulseAnimationState extends State<_PulseAnimation> with SingleTickerProvi
     _ctrl = AnimationController(vsync: this, duration: const Duration(milliseconds: 1500));
     _ctrl.repeat(reverse: true);
   }
-
-  @override
-  void dispose() {
-    _ctrl.dispose();
-    super.dispose();
-  }
-
-  @override
+@override
   Widget build(BuildContext context) {
     return SectionAnimator( 
       listenable: _ctrl,
