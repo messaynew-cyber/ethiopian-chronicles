@@ -64,10 +64,10 @@ class _LoadingScreen extends StatelessWidget {
                   width: 80, height: 80,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(18),
-                    color: AppTheme.aksumGold.withOpacity(0.08),
-                    border: Border.all(color: AppTheme.aksumGold.withOpacity(0.2), width: 1),
+                    color: AppTheme.accent.withOpacity(0.08),
+                    border: Border.all(color: AppTheme.accent.withOpacity(0.2), width: 1),
                   ),
-                  child: const Icon(Icons.account_balance, color: AppTheme.aksumGold, size: 36),
+                  child: const Icon(Icons.account_balance, color: AppTheme.accent, size: 36),
                 ),
               ),
             ),
@@ -90,7 +90,7 @@ class _LoadingScreen extends StatelessWidget {
                   duration: const Duration(seconds: 3),
                   builder: (_, val, __) => LinearProgressIndicator(
                     value: val, backgroundColor: AppTheme.surfaceLight,
-                    color: AppTheme.aksumGold, minHeight: 2,
+                    color: AppTheme.accent, minHeight: 2,
                   ),
                 ),
               ),

@@ -188,7 +188,7 @@ class _ChapterScreenState extends State<ChapterScreen> with TickerProviderStateM
                         parent: _sectionAnimCtrl,
                         curve: Interval(delay.clamp(0.0, 1.0), (delay + 0.4).clamp(0.0, 1.0), curve: Curves.easeOutExpo),
                       );
-                      return AnimatedBuilder(
+                      return SectionAnimator(
                         animation: anim,
                         builder: (_, child) => FadeTransition(
                           opacity: anim,
@@ -372,7 +372,7 @@ class _PulseAnimationState extends State<_PulseAnimation> with SingleTickerProvi
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedBuilder(
+    return SectionAnimator(
       animation: _ctrl,
       builder: (_, child) => Transform.scale(scale: 1.0 + _ctrl.value * 0.08, child: child),
       child: widget.child,
@@ -404,10 +404,10 @@ class AnimatedFractionallySizedBox extends StatelessWidget {
   }
 }
 
-class AnimatedBuilder extends AnimatedWidget {
+class SectionAnimator extends AnimatedWidget {
   final Widget? child;
   final TransitionBuilder builder;
-  const AnimatedBuilder({super.key, required super.listenable, required this.builder, this.child});
+  const SectionAnimator({super.key, required super.listenable, required this.builder, this.child});
 
   @override
   Widget build(BuildContext context) => builder(context, child);

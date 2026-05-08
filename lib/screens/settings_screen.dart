@@ -57,7 +57,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(children: [
-                  const Icon(Icons.account_balance, color: AppTheme.aksumGold, size: 20), const SizedBox(width: 10),
+                  const Icon(Icons.account_balance, color: AppTheme.accent, size: 20), const SizedBox(width: 10),
                   Text(a.t('Ethiopian Chronicles', 'ኢትዮጵያዊ ታሪኮች'),
                       style: const TextStyle(color: AppTheme.textPrimary, fontSize: 16, fontFamily: 'serif', fontWeight: FontWeight.w700)),
                 ]),
@@ -77,7 +77,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
   Widget _section(String title) => Padding(
     padding: const EdgeInsets.only(bottom: 8),
-    child: Text(title, style: const TextStyle(color: AppTheme.aksumGold, fontSize: 11, fontFamily: 'monospace', letterSpacing: 2, fontWeight: FontWeight.w600)),
+    child: Text(title, style: const TextStyle(color: AppTheme.accent, fontSize: 11, fontFamily: 'monospace', letterSpacing: 2, fontWeight: FontWeight.w600)),
   );
 
   Widget _tile(String title, String subtitle, IconData icon, VoidCallback onTap) => Container(
@@ -96,7 +96,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       title: Text(title, style: const TextStyle(color: AppTheme.textPrimary, fontSize: 13)),
       subtitle: Text(subtitle, style: const TextStyle(color: AppTheme.textMuted, fontSize: 11)),
       value: value, onChanged: (v) => onChanged(v), dense: true,
-      activeColor: AppTheme.aksumGold,
+      activeColor: AppTheme.accent,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
     ),
   );

@@ -69,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             fontFamily: 'serif', fontWeight: FontWeight.w900, letterSpacing: 3,
                           )),
                           Text(a.t('CHRONICLES', 'ታሪኮች'), style: const TextStyle(
-                            color: AppTheme.aksumGold, fontSize: 11,
+                            color: AppTheme.accent, fontSize: 11,
                             fontFamily: 'monospace', letterSpacing: 5, fontWeight: FontWeight.w600,
                           )),
                         ],
