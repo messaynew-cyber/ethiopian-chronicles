@@ -6,8 +6,11 @@
   "year_start": 320,
   "year_end": 360,
   "location": "Aksum, Tigray",
-  "is_free": false,
-  "key_figures": ["King Ezana", "Frumentius (Abba Salama)"],
+  "is_free": true,
+  "key_figures": [
+    "King Ezana",
+    "Frumentius (Abba Salama)"
+  ],
   "sections": [
     {
       "type": "text",
@@ -17,22 +20,22 @@
     {
       "type": "quote",
       "body": "By the power of the Lord of Heaven, who has given me strength, I have conquered my enemies. I am Ezana, King of Aksum, Himyar, Raydan, Saba, and Beja.",
-      "attribution": "— Ezana Stone inscription, circa 340 CE"
+      "attribution": "\u2014 Ezana Stone inscription, circa 340 CE"
     },
     {
       "type": "text",
       "title": "The Conversion",
-      "body": "Around 330–340 CE, Ezana converted to Christianity. The inscriptions tell the story: early in his reign, his coins bore the crescent and disk — symbols of the indigenous Aksumite gods. But by the end of his reign, the cross had replaced them.\n\nThis was no minor cultural shift. Aksum became the second kingdom in the world (after Armenia) to adopt Christianity as its state religion — predating the conversion of the Roman Empire under Constantine's successors. The Ethiopian Orthodox Tewahedo Church traces its founding directly to this moment.\n\nFrumentius traveled to Alexandria, where Athanasius the Great — the patriarch of the Coptic Church — consecrated him as the first bishop of Ethiopia, giving him the name Abba Salama, 'Father of Peace.' To this day, the head of the Ethiopian Orthodox Church is appointed by the Coptic Pope of Alexandria — a tradition that began with Frumentius."
+      "body": "Around 330\u2013340 CE, Ezana converted to Christianity. The inscriptions tell the story: early in his reign, his coins bore the crescent and disk \u2014 symbols of the indigenous Aksumite gods. But by the end of his reign, the cross had replaced them.\n\nThis was no minor cultural shift. Aksum became the second kingdom in the world (after Armenia) to adopt Christianity as its state religion \u2014 predating the conversion of the Roman Empire under Constantine's successors. The Ethiopian Orthodox Tewahedo Church traces its founding directly to this moment.\n\nFrumentius traveled to Alexandria, where Athanasius the Great \u2014 the patriarch of the Coptic Church \u2014 consecrated him as the first bishop of Ethiopia, giving him the name Abba Salama, 'Father of Peace.' To this day, the head of the Ethiopian Orthodox Church is appointed by the Coptic Pope of Alexandria \u2014 a tradition that began with Frumentius."
     },
     {
       "type": "text",
       "title": "The Ezana Stone",
-      "body": "In 1981, farmers near Aksum uncovered a massive stone stele — the Ezana Stone — inscribed in three languages: Ge'ez (the Aksumite script), Sabaean (South Arabian), and Greek. The trilingual inscription records Ezana's military campaigns and his devotion to the 'Lord of Heaven.'\n\nThe Greek text reads: 'I, Ezana, King of the Aksumites... by the power of the Lord of Heaven, I have made war upon the Noba and have conquered them.' The Ge'ez version invokes the same deity but through an Ethiopian lens. This stone is one of the most important archaeological artifacts in Ethiopian history — the Rosetta Stone of the Horn of Africa."
+      "body": "In 1981, farmers near Aksum uncovered a massive stone stele \u2014 the Ezana Stone \u2014 inscribed in three languages: Ge'ez (the Aksumite script), Sabaean (South Arabian), and Greek. The trilingual inscription records Ezana's military campaigns and his devotion to the 'Lord of Heaven.'\n\nThe Greek text reads: 'I, Ezana, King of the Aksumites... by the power of the Lord of Heaven, I have made war upon the Noba and have conquered them.' The Ge'ez version invokes the same deity but through an Ethiopian lens. This stone is one of the most important archaeological artifacts in Ethiopian history \u2014 the Rosetta Stone of the Horn of Africa."
     },
     {
       "type": "text",
       "title": "Legacy of a Christian Kingdom",
-      "body": "Ezana's conversion set Ethiopia on a unique historical trajectory. While Christianity spread through the Roman Empire under imperial patronage, Ethiopia's embrace of the faith was independent — not imposed by a foreign power but adopted by its own king.\n\nThe Ethiopian Church developed its own distinctive traditions: the Ark of the Covenant is said to reside in Aksum, brought by Menelik I, the son of Solomon and Sheba; the Ge'ez liturgy preserved ancient practices lost elsewhere; and the rock-hewn churches of Lalibela, built centuries later, carried forward the legacy of Ezana's faith.\n\nWhen Europeans later encountered Ethiopia, they were astonished to find an African Christian kingdom that predated their own conversions. This would become a powerful symbol in Ethiopian identity — a nation that chose Christ on its own terms."
+      "body": "Ezana's conversion set Ethiopia on a unique historical trajectory. While Christianity spread through the Roman Empire under imperial patronage, Ethiopia's embrace of the faith was independent \u2014 not imposed by a foreign power but adopted by its own king.\n\nThe Ethiopian Church developed its own distinctive traditions: the Ark of the Covenant is said to reside in Aksum, brought by Menelik I, the son of Solomon and Sheba; the Ge'ez liturgy preserved ancient practices lost elsewhere; and the rock-hewn churches of Lalibela, built centuries later, carried forward the legacy of Ezana's faith.\n\nWhen Europeans later encountered Ethiopia, they were astonished to find an African Christian kingdom that predated their own conversions. This would become a powerful symbol in Ethiopian identity \u2014 a nation that chose Christ on its own terms."
     }
   ]
 }

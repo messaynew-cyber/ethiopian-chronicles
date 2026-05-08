@@ -3,14 +3,33 @@
   "era_id": "zagwe",
   "title": "Lalibela: The New Jerusalem",
   "subtitle": "Churches Carved from Living Rock",
-  "year_start": 1180, "year_end": 1220,
+  "year_start": 1180,
+  "year_end": 1220,
   "location": "Lalibela, Wollo",
-  "is_free": false,
-  "key_figures": ["King Lalibela"],
+  "is_free": true,
+  "key_figures": [
+    "King Lalibela"
+  ],
   "sections": [
-    {"type":"text","title":"A King's Vision","body":"King Lalibela, the most famous ruler of the Zagwe dynasty, is said to have been carried to heaven by angels during a divine trance. There, God showed him a vision of churches carved from single blocks of stone. When he awoke, Lalibela set out to build a 'New Jerusalem' in the highlands of Ethiopia — a response to the Muslim conquest of Jerusalem under Saladin in 1187, which had made pilgrimage to the Holy Land difficult for Ethiopian Christians. Over the next decades, 11 monolithic churches were carved directly from the volcanic tuff of the Lasta mountains — not built up from stone blocks, but excavated downward, each one a single piece of living rock."},
-    {"type":"text","title":"The Eleven Churches","body":"The churches of Lalibela are divided into two clusters separated by a channel representing the River Jordan. The northern group includes Biete Medhane Alem — the largest monolithic church in the world, with 36 pillars. The southern group includes Biete Giyorgis, the Church of Saint George, carved in the shape of a perfect cross and standing in a deep pit. Each church is connected by a labyrinth of tunnels, trenches, and passages. The precision of the carving is extraordinary — walls perfectly vertical, columns seamlessly integrated with the rock, windows aligned to admit light at specific times of day."},
-    {"type":"quote","body":"We can scarcely believe that these churches were made by men — they seem the work of angels.","attribution":"— Francisco Álvares, Portuguese missionary, 1520s"},
-    {"type":"text","title":"A Living Heritage","body":"Unlike many ancient monuments, Lalibela is not a ruin. It has been continuously used for worship for over 800 years. Priests still chant the Ge'ez liturgy within these walls. Pilgrims crawl through the dark tunnels on their knees. During Timkat (Epiphany) and Ledet (Christmas), thousands gather at Lalibela, and the rock-hewn churches fill with incense, drumbeats, and the ancient rhythms of Ethiopian Orthodox worship. Lalibela is a UNESCO World Heritage Site and remains one of the most extraordinary architectural achievements of the medieval world."}
+    {
+      "type": "text",
+      "title": "A King's Vision",
+      "body": "King Lalibela, the most famous ruler of the Zagwe dynasty, is said to have been carried to heaven by angels during a divine trance. There, God showed him a vision of churches carved from single blocks of stone. When he awoke, Lalibela set out to build a 'New Jerusalem' in the highlands of Ethiopia \u2014 a response to the Muslim conquest of Jerusalem under Saladin in 1187, which had made pilgrimage to the Holy Land difficult for Ethiopian Christians. Over the next decades, 11 monolithic churches were carved directly from the volcanic tuff of the Lasta mountains \u2014 not built up from stone blocks, but excavated downward, each one a single piece of living rock."
+    },
+    {
+      "type": "text",
+      "title": "The Eleven Churches",
+      "body": "The churches of Lalibela are divided into two clusters separated by a channel representing the River Jordan. The northern group includes Biete Medhane Alem \u2014 the largest monolithic church in the world, with 36 pillars. The southern group includes Biete Giyorgis, the Church of Saint George, carved in the shape of a perfect cross and standing in a deep pit. Each church is connected by a labyrinth of tunnels, trenches, and passages. The precision of the carving is extraordinary \u2014 walls perfectly vertical, columns seamlessly integrated with the rock, windows aligned to admit light at specific times of day."
+    },
+    {
+      "type": "quote",
+      "body": "We can scarcely believe that these churches were made by men \u2014 they seem the work of angels.",
+      "attribution": "\u2014 Francisco \u00c1lvares, Portuguese missionary, 1520s"
+    },
+    {
+      "type": "text",
+      "title": "A Living Heritage",
+      "body": "Unlike many ancient monuments, Lalibela is not a ruin. It has been continuously used for worship for over 800 years. Priests still chant the Ge'ez liturgy within these walls. Pilgrims crawl through the dark tunnels on their knees. During Timkat (Epiphany) and Ledet (Christmas), thousands gather at Lalibela, and the rock-hewn churches fill with incense, drumbeats, and the ancient rhythms of Ethiopian Orthodox worship. Lalibela is a UNESCO World Heritage Site and remains one of the most extraordinary architectural achievements of the medieval world."
+    }
   ]
 }

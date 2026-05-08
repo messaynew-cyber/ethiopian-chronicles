@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import '../models/chapter.dart';
 import '../services/content_service.dart';
+import '../services/app_state.dart';
 import '../theme/app_theme.dart';
 
 class ChapterScreen extends StatefulWidget {
   final Chapter chapter;
   final ContentService content;
-  const ChapterScreen({super.key, required this.chapter, required this.content});
+  final AppState appState;
+  const ChapterScreen({super.key, required this.chapter, required this.content, required this.appState});
 
   @override
   State<ChapterScreen> createState() => _ChapterScreenState();

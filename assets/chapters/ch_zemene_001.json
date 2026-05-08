@@ -1,12 +1,31 @@
 {
-  "id": "ch_zemene_001", "era_id": "zemene",
-  "title": "The Era of Princes", "subtitle": "A Century of Warlords and Chaos",
-  "year_start": 1769, "year_end": 1855,
-  "location": "Throughout Ethiopia", "is_free": false,
-  "key_figures": ["Ras Mikael Sehul", "Ras Gugsa"],
+  "id": "ch_zemene_001",
+  "era_id": "zemene",
+  "title": "The Era of Princes",
+  "subtitle": "A Century of Warlords and Chaos",
+  "year_start": 1769,
+  "year_end": 1855,
+  "location": "Throughout Ethiopia",
+  "is_free": true,
+  "key_figures": [
+    "Ras Mikael Sehul",
+    "Ras Gugsa"
+  ],
   "sections": [
-    {"type":"text","title":"The Emperor Becomes a Puppet","body":"The Zemene Mesafint — the Era of Princes — began in 1769 when Ras Mikael Sehul, a powerful regional warlord from Tigray, marched on Gondar and deposed Emperor Iyoas I. For the next 86 years, Ethiopia had no effective central authority. Emperors were enthroned and deposed at will by regional lords. At one point, there were three simultaneous claimants to the imperial throne. The emperors became ceremonial figures, confined to the palace in Gondar while warlords fought for control of the countryside."},
-    {"type":"text","title":"Warlords and Chaos","body":"The country fractured into warring provinces: Tigray, Amhara, Gojjam, Shewa, and others. Each was ruled by a Ras (duke) who commanded private armies and collected taxes independently. The Oromo migrations of the 17th century had reshaped the demographic map, and Oromo clans became power brokers in their own right. Raiding and counter-raiding devastated the countryside. Agriculture declined as farmers fled to defensible highlands. The era's chronicles are filled with battles, betrayals, and shifting alliances."},
-    {"type":"text","title":"The Seeds of Reunification","body":"Out of this chaos, a new generation of leaders emerged who dreamed of reunifying the empire. In the north, Dejazmach Kassa (later Emperor Tewodros II) was building his reputation as a brilliant military commander. In the south, the rulers of Shewa — including a young nobleman named Menelik — were consolidating power. The Zemene Mesafint would end not with a negotiated peace but with a man who would crush the warlords by force: Tewodros II, the first modernizer of Ethiopia."}
+    {
+      "type": "text",
+      "title": "The Emperor Becomes a Puppet",
+      "body": "The Zemene Mesafint \u2014 the Era of Princes \u2014 began in 1769 when Ras Mikael Sehul, a powerful regional warlord from Tigray, marched on Gondar and deposed Emperor Iyoas I. For the next 86 years, Ethiopia had no effective central authority. Emperors were enthroned and deposed at will by regional lords. At one point, there were three simultaneous claimants to the imperial throne. The emperors became ceremonial figures, confined to the palace in Gondar while warlords fought for control of the countryside."
+    },
+    {
+      "type": "text",
+      "title": "Warlords and Chaos",
+      "body": "The country fractured into warring provinces: Tigray, Amhara, Gojjam, Shewa, and others. Each was ruled by a Ras (duke) who commanded private armies and collected taxes independently. The Oromo migrations of the 17th century had reshaped the demographic map, and Oromo clans became power brokers in their own right. Raiding and counter-raiding devastated the countryside. Agriculture declined as farmers fled to defensible highlands. The era's chronicles are filled with battles, betrayals, and shifting alliances."
+    },
+    {
+      "type": "text",
+      "title": "The Seeds of Reunification",
+      "body": "Out of this chaos, a new generation of leaders emerged who dreamed of reunifying the empire. In the north, Dejazmach Kassa (later Emperor Tewodros II) was building his reputation as a brilliant military commander. In the south, the rulers of Shewa \u2014 including a young nobleman named Menelik \u2014 were consolidating power. The Zemene Mesafint would end not with a negotiated peace but with a man who would crush the warlords by force: Tewodros II, the first modernizer of Ethiopia."
+    }
   ]
 }

@@ -1,12 +1,30 @@
 {
-  "id": "ch_solomonic_002", "era_id": "solomonic",
-  "title": "Emperor Zara Yaqob", "subtitle": "The Philosopher King",
-  "year_start": 1434, "year_end": 1468,
-  "location": "Debre Birhan, Shewa", "is_free": false,
-  "key_figures": ["Zara Yaqob"],
+  "id": "ch_solomonic_002",
+  "era_id": "solomonic",
+  "title": "Emperor Zara Yaqob",
+  "subtitle": "The Philosopher King",
+  "year_start": 1434,
+  "year_end": 1468,
+  "location": "Debre Birhan, Shewa",
+  "is_free": true,
+  "key_figures": [
+    "Zara Yaqob"
+  ],
   "sections": [
-    {"type":"text","title":"The Reformer King","body":"Zara Yaqob (1434–1468) was one of Ethiopia's greatest emperors — a theologian, reformer, and warrior. He centralized the state, codified religious practices, resolved theological disputes, and built churches and monasteries across the highlands. His reign saw a cultural and religious renaissance. He wrote the Mashafa Berhan (Book of Light), a theological treatise that unified Ethiopian Orthodox doctrine. He reformed the church calendar, standardized liturgy, and suppressed pagan practices in the provinces."},
-    {"type":"text","title":"The Cult of Mary","body":"Zara Yaqob was a passionate devotee of the Virgin Mary and made her veneration central to Ethiopian Christianity. He composed prayers to Mary, ordered her image painted in every church, and instituted the practice of reading the Miracles of Mary during services. This Marian devotion became a defining feature of Ethiopian Orthodox spirituality. To this day, the Ethiopian Church has more feast days dedicated to Mary than any other Christian tradition."},
-    {"type":"text","title":"The Light of Debre Birhan","body":"In 1456, a bright comet appeared in the sky. Zara Yaqob interpreted it as a divine sign and founded a new capital at Debre Birhan — meaning 'Mountain of Light.' Here, he built a palace, churches, and a court that attracted scholars and monks from across the Christian world. Ethiopian delegates were sent to the Council of Florence (1441), where they met with European Christians — one of the earliest diplomatic contacts between Ethiopia and Renaissance Europe."}
+    {
+      "type": "text",
+      "title": "The Reformer King",
+      "body": "Zara Yaqob (1434\u20131468) was one of Ethiopia's greatest emperors \u2014 a theologian, reformer, and warrior. He centralized the state, codified religious practices, resolved theological disputes, and built churches and monasteries across the highlands. His reign saw a cultural and religious renaissance. He wrote the Mashafa Berhan (Book of Light), a theological treatise that unified Ethiopian Orthodox doctrine. He reformed the church calendar, standardized liturgy, and suppressed pagan practices in the provinces."
+    },
+    {
+      "type": "text",
+      "title": "The Cult of Mary",
+      "body": "Zara Yaqob was a passionate devotee of the Virgin Mary and made her veneration central to Ethiopian Christianity. He composed prayers to Mary, ordered her image painted in every church, and instituted the practice of reading the Miracles of Mary during services. This Marian devotion became a defining feature of Ethiopian Orthodox spirituality. To this day, the Ethiopian Church has more feast days dedicated to Mary than any other Christian tradition."
+    },
+    {
+      "type": "text",
+      "title": "The Light of Debre Birhan",
+      "body": "In 1456, a bright comet appeared in the sky. Zara Yaqob interpreted it as a divine sign and founded a new capital at Debre Birhan \u2014 meaning 'Mountain of Light.' Here, he built a palace, churches, and a court that attracted scholars and monks from across the Christian world. Ethiopian delegates were sent to the Council of Florence (1441), where they met with European Christians \u2014 one of the earliest diplomatic contacts between Ethiopia and Renaissance Europe."
+    }
   ]
 }

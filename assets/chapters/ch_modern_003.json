@@ -1,14 +1,35 @@
 {
-  "id": "ch_modern_003", "era_id": "modern",
+  "id": "ch_modern_003",
+  "era_id": "modern",
   "title": "Haile Selassie and the Modern World",
   "subtitle": "The Lion of Judah on the World Stage",
-  "year_start": 1930, "year_end": 1974,
-  "location": "Addis Ababa, Shewa", "is_free": false,
-  "key_figures": ["Emperor Haile Selassie I"],
+  "year_start": 1930,
+  "year_end": 1974,
+  "location": "Addis Ababa, Shewa",
+  "is_free": true,
+  "key_figures": [
+    "Emperor Haile Selassie I"
+  ],
   "sections": [
-    {"type":"text","title":"The Rise of Ras Tafari","body":"Born Tafari Makonnen in 1892, the son of Ras Makonnen (the hero of Adwa), Haile Selassie rose through the ranks of Ethiopian nobility with extraordinary political skill. He became regent in 1916 and was crowned Emperor in 1930, taking the name Haile Selassie — 'Power of the Trinity.' His coronation was an international spectacle, attended by representatives from across the world. For many in the African diaspora, it was the first time they saw a black king crowned as an equal among nations."},
-    {"type":"text","title":"The Italian Invasion and Exile","body":"In 1935, Mussolini's Italy invaded Ethiopia using chemical weapons — mustard gas dropped from airplanes on soldiers and civilians alike. The League of Nations imposed weak sanctions and did nothing. Haile Selassie fled to exile in Bath, England. In 1936, he delivered one of the most powerful speeches of the 20th century at the League of Nations in Geneva: 'It is us today. It will be you tomorrow.' The speech was prophetic. World War II began three years later. In 1941, with British support, Haile Selassie returned to Addis Ababa and was restored to his throne."},
-    {"type":"quote","body":"It is us today. It will be you tomorrow.","attribution":"— Haile Selassie I, League of Nations, 1936"},
-    {"type":"text","title":"The Reformer and the Revolutionary","body":"After the war, Haile Selassie modernized Ethiopia: he introduced the 1955 Constitution, built universities, and made Ethiopia a founding member of the United Nations and the Organization of African Unity (headquartered in Addis Ababa). But he was also an absolute monarch who resisted democratization. In 1974, a military coup — the Derg — overthrew him. He died under house arrest in 1975. His legacy is profoundly contested: to some, the father of modern Ethiopia; to others, a feudal relic who failed to share power. To the Rastafari movement, he is the returned messiah. He remains the most internationally recognized Ethiopian who ever lived."}
+    {
+      "type": "text",
+      "title": "The Rise of Ras Tafari",
+      "body": "Born Tafari Makonnen in 1892, the son of Ras Makonnen (the hero of Adwa), Haile Selassie rose through the ranks of Ethiopian nobility with extraordinary political skill. He became regent in 1916 and was crowned Emperor in 1930, taking the name Haile Selassie \u2014 'Power of the Trinity.' His coronation was an international spectacle, attended by representatives from across the world. For many in the African diaspora, it was the first time they saw a black king crowned as an equal among nations."
+    },
+    {
+      "type": "text",
+      "title": "The Italian Invasion and Exile",
+      "body": "In 1935, Mussolini's Italy invaded Ethiopia using chemical weapons \u2014 mustard gas dropped from airplanes on soldiers and civilians alike. The League of Nations imposed weak sanctions and did nothing. Haile Selassie fled to exile in Bath, England. In 1936, he delivered one of the most powerful speeches of the 20th century at the League of Nations in Geneva: 'It is us today. It will be you tomorrow.' The speech was prophetic. World War II began three years later. In 1941, with British support, Haile Selassie returned to Addis Ababa and was restored to his throne."
+    },
+    {
+      "type": "quote",
+      "body": "It is us today. It will be you tomorrow.",
+      "attribution": "\u2014 Haile Selassie I, League of Nations, 1936"
+    },
+    {
+      "type": "text",
+      "title": "The Reformer and the Revolutionary",
+      "body": "After the war, Haile Selassie modernized Ethiopia: he introduced the 1955 Constitution, built universities, and made Ethiopia a founding member of the United Nations and the Organization of African Unity (headquartered in Addis Ababa). But he was also an absolute monarch who resisted democratization. In 1974, a military coup \u2014 the Derg \u2014 overthrew him. He died under house arrest in 1975. His legacy is profoundly contested: to some, the father of modern Ethiopia; to others, a feudal relic who failed to share power. To the Rastafari movement, he is the returned messiah. He remains the most internationally recognized Ethiopian who ever lived."
+    }
   ]
 }

@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 import '../models/chapter.dart';
+import '../services/app_state.dart';
 import '../theme/app_theme.dart';
 
 class TimelineWidget extends StatefulWidget {
   final List<Era> eras;
   final String selectedEraId;
   final ValueChanged<String> onEraSelected;
+  final AppState appState;
 
   const TimelineWidget({
     super.key,
     required this.eras,
     required this.selectedEraId,
     required this.onEraSelected,
+    required this.appState,
   });
 
   @override
@@ -106,7 +109,7 @@ class _TimelineWidgetState extends State<TimelineWidget> {
                         textAlign: TextAlign.center,
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
-                        child: Text(era.name),
+                        child: Text(widget.appState.t(era.name, AppTheme.eraAmharic(era.id).isNotEmpty ? AppTheme.eraAmharic(era.id) : era.name)),
                       ),
                       // Amharic name below
                       if (AppTheme.eraAmharic(era.id).isNotEmpty)

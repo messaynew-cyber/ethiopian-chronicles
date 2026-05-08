@@ -6,43 +6,48 @@
   "year_start": 1895,
   "year_end": 1896,
   "location": "Adwa, Tigray",
-  "is_free": false,
-  "key_figures": ["Emperor Menelik II", "Empress Taytu Betul", "Ras Makonnen", "General Oreste Baratieri"],
+  "is_free": true,
+  "key_figures": [
+    "Emperor Menelik II",
+    "Empress Taytu Betul",
+    "Ras Makonnen",
+    "General Oreste Baratieri"
+  ],
   "sections": [
     {
       "type": "text",
       "title": "Prelude to Battle",
-      "body": "In 1889, Emperor Menelik II signed the Treaty of Wuchale with Italy. The Amharic version recognized Menelik as the sovereign Emperor of Ethiopia and offered Italy the right to mediate Ethiopian foreign relations as an option — not an obligation. But the Italian version, written in a language Menelik did not read, contained a crucial difference: Article 17 declared Ethiopia an Italian protectorate.\n\nWhen Menelik discovered the deception, he denounced the treaty in 1893. Italy, determined to establish a colonial empire to rival Britain and France, began arming Menelik's rival, Ras Mengesha of Tigray, and advancing troops into Ethiopian territory.\n\nBy 1895, war was inevitable. Menelik issued a proclamation calling all Ethiopians to arms: 'Enemies have come across the sea. They have broken our trust. They seek to destroy our country and our religion. Rise up and defend your homeland.'"
+      "body": "In 1889, Emperor Menelik II signed the Treaty of Wuchale with Italy. The Amharic version recognized Menelik as the sovereign Emperor of Ethiopia and offered Italy the right to mediate Ethiopian foreign relations as an option \u2014 not an obligation. But the Italian version, written in a language Menelik did not read, contained a crucial difference: Article 17 declared Ethiopia an Italian protectorate.\n\nWhen Menelik discovered the deception, he denounced the treaty in 1893. Italy, determined to establish a colonial empire to rival Britain and France, began arming Menelik's rival, Ras Mengesha of Tigray, and advancing troops into Ethiopian territory.\n\nBy 1895, war was inevitable. Menelik issued a proclamation calling all Ethiopians to arms: 'Enemies have come across the sea. They have broken our trust. They seek to destroy our country and our religion. Rise up and defend your homeland.'"
     },
     {
       "type": "quote",
       "body": "I have no intention of being a spectator while this distant Emperor, Menelik, meddles with the affairs of my country. Ethiopia shall be conquered.",
-      "attribution": "— Italian Prime Minister Francesco Crispi, 1895"
+      "attribution": "\u2014 Italian Prime Minister Francesco Crispi, 1895"
     },
     {
       "type": "text",
       "title": "The Armies Gather",
-      "body": "Menelik assembled an army unprecedented in African history. Estimates range from 80,000 to 120,000 soldiers — warriors from every province: Amhara, Oromo, Tigrayan, Gurage, Somali, and more. Empress Taytu Betul commanded her own contingent of 10,000 soldiers and personally led the supply chain, organizing a logistics network that fed and armed the massive force for months.\n\nThe Italian force, under General Oreste Baratieri, numbered approximately 17,700 men — Italian regulars mixed with askari (Eritrean colonial troops). Baratieri was under intense pressure from Rome to achieve a decisive victory. Prime Minister Crispi had staked his government on the Ethiopian campaign."
+      "body": "Menelik assembled an army unprecedented in African history. Estimates range from 80,000 to 120,000 soldiers \u2014 warriors from every province: Amhara, Oromo, Tigrayan, Gurage, Somali, and more. Empress Taytu Betul commanded her own contingent of 10,000 soldiers and personally led the supply chain, organizing a logistics network that fed and armed the massive force for months.\n\nThe Italian force, under General Oreste Baratieri, numbered approximately 17,700 men \u2014 Italian regulars mixed with askari (Eritrean colonial troops). Baratieri was under intense pressure from Rome to achieve a decisive victory. Prime Minister Crispi had staked his government on the Ethiopian campaign."
     },
     {
       "type": "text",
       "title": "The Night March",
-      "body": "On the night of February 29, 1896, Baratieri made a fatal decision. Rather than wait for reinforcements, he ordered his army to advance under cover of darkness toward the Ethiopian positions at Adwa. His plan divided his force into four brigades, each marching separately through unfamiliar mountain terrain.\n\nThe Italian maps were catastrophically wrong. Roads marked on their charts did not exist. Mountain ridges were misdrawn. By dawn on March 1, the four brigades were strung out across miles of rough terrain, completely separated from each other. The leftmost brigade, under General Albertone, marched into a dead end — a narrow valley — at exactly the wrong location. When the sun rose, they were surrounded by Ethiopian forces."
+      "body": "On the night of February 29, 1896, Baratieri made a fatal decision. Rather than wait for reinforcements, he ordered his army to advance under cover of darkness toward the Ethiopian positions at Adwa. His plan divided his force into four brigades, each marching separately through unfamiliar mountain terrain.\n\nThe Italian maps were catastrophically wrong. Roads marked on their charts did not exist. Mountain ridges were misdrawn. By dawn on March 1, the four brigades were strung out across miles of rough terrain, completely separated from each other. The leftmost brigade, under General Albertone, marched into a dead end \u2014 a narrow valley \u2014 at exactly the wrong location. When the sun rose, they were surrounded by Ethiopian forces."
     },
     {
       "type": "text",
       "title": "The Battle",
-      "body": "At 6:00 AM, the first shots were fired. Empress Taytu's artillery — 42 mountain guns personally acquired by the Empress — opened fire on the Italian positions. The Ethiopian army attacked in waves, using a combination of traditional weaponry and modern rifles acquired from France and Russia.\n\nRas Makonnen, the father of the future Emperor Haile Selassie, led the central assault. His forces used the terrain masterfully — attacking from high ground, cutting off Italian escape routes, and driving the brigades into each other.\n\nBy noon, the Italian army had collapsed. Brigade after brigade was destroyed or forced to surrender. General Baratieri fled the battlefield on horseback. Over 6,000 Italian soldiers were killed, 1,500 wounded, and 3,000 taken prisoner. Ethiopian casualties, while significant, were proportionally far lower."
+      "body": "At 6:00 AM, the first shots were fired. Empress Taytu's artillery \u2014 42 mountain guns personally acquired by the Empress \u2014 opened fire on the Italian positions. The Ethiopian army attacked in waves, using a combination of traditional weaponry and modern rifles acquired from France and Russia.\n\nRas Makonnen, the father of the future Emperor Haile Selassie, led the central assault. His forces used the terrain masterfully \u2014 attacking from high ground, cutting off Italian escape routes, and driving the brigades into each other.\n\nBy noon, the Italian army had collapsed. Brigade after brigade was destroyed or forced to surrender. General Baratieri fled the battlefield on horseback. Over 6,000 Italian soldiers were killed, 1,500 wounded, and 3,000 taken prisoner. Ethiopian casualties, while significant, were proportionally far lower."
     },
     {
       "type": "quote",
       "body": "Italy can now wash her hands of the Ethiopian affair. The men who fell at Adwa avenged their defeat with their blood.",
-      "attribution": "— Italian newspaper L'Osservatore Romano, March 1896"
+      "attribution": "\u2014 Italian newspaper L'Osservatore Romano, March 1896"
     },
     {
       "type": "text",
       "title": "The Aftermath",
-      "body": "News of Adwa electrified the world. For the first time, an African army had decisively defeated a European colonial power in a pitched battle. The Treaty of Addis Ababa, signed in October 1896, forced Italy to recognize Ethiopia's absolute independence.\n\nPrime Minister Crispi's government collapsed. Italy would not attempt to colonize Ethiopia again until Mussolini's invasion in 1935 — and that occupation lasted only five years.\n\nAdwa became a global symbol. Pan-Africanists from W.E.B. Du Bois to Marcus Garvey invoked it. Anti-colonial movements from India to the Caribbean cited it. Haile Selassie, speaking at the League of Nations decades later, reminded the world that Ethiopia's sovereignty was won at Adwa — and that justice demanded it be respected.\n\nThe date of the battle, March 1, is still celebrated in Ethiopia as Adwa Victory Day. The hills of Tigray, where 100,000 Ethiopians once stood against an empire, remain sacred ground."
+      "body": "News of Adwa electrified the world. For the first time, an African army had decisively defeated a European colonial power in a pitched battle. The Treaty of Addis Ababa, signed in October 1896, forced Italy to recognize Ethiopia's absolute independence.\n\nPrime Minister Crispi's government collapsed. Italy would not attempt to colonize Ethiopia again until Mussolini's invasion in 1935 \u2014 and that occupation lasted only five years.\n\nAdwa became a global symbol. Pan-Africanists from W.E.B. Du Bois to Marcus Garvey invoked it. Anti-colonial movements from India to the Caribbean cited it. Haile Selassie, speaking at the League of Nations decades later, reminded the world that Ethiopia's sovereignty was won at Adwa \u2014 and that justice demanded it be respected.\n\nThe date of the battle, March 1, is still celebrated in Ethiopia as Adwa Victory Day. The hills of Tigray, where 100,000 Ethiopians once stood against an empire, remain sacred ground."
     }
   ]
 }

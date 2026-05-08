@@ -1,13 +1,35 @@
 {
-  "id": "ch_modern_001", "era_id": "modern",
-  "title": "Tewodros II: The Unifier", "subtitle": "A Mad King or a Visionary?",
-  "year_start": 1855, "year_end": 1868,
-  "location": "Magdala, Amhara", "is_free": false,
-  "key_figures": ["Emperor Tewodros II"],
+  "id": "ch_modern_001",
+  "era_id": "modern",
+  "title": "Tewodros II: The Unifier",
+  "subtitle": "A Mad King or a Visionary?",
+  "year_start": 1855,
+  "year_end": 1868,
+  "location": "Magdala, Amhara",
+  "is_free": true,
+  "key_figures": [
+    "Emperor Tewodros II"
+  ],
   "sections": [
-    {"type":"text","title":"The Rise of Kassa","body":"Born Kassa Hailu, the son of a minor nobleman, Tewodros rose from obscurity through sheer military brilliance. He defeated warlord after warlord, and in 1855, he was crowned Emperor Tewodros II in the ancient church of Derasge. His coronation name was deliberate: an Ethiopian prophecy foretold that a king named Tewodros would restore the empire's greatness. From the moment he took the throne, he set out to prove the prophecy true."},
-    {"type":"text","title":"The Reformer","body":"Tewodros was Ethiopia's first modernizer. He sought to abolish the slave trade, centralize taxation, create a standing national army (rather than relying on feudal levies), and build roads connecting the empire. He imported firearms, established an armory, and invited European craftsmen and missionaries to his court. His vision was a unified, modern Ethiopia that could stand as an equal among nations. But his methods were brutal — he crushed opposition with overwhelming force, earning him both fear and the epithet 'the mad king' among his enemies."},
-    {"type":"text","title":"Tragedy at Magdala","body":"Tewodros's downfall came from his dealings with Britain. In 1862, he wrote to Queen Victoria proposing an alliance — and received no reply. Enraged, he imprisoned the British consul and several European missionaries. Britain responded with a military expedition of 13,000 soldiers led by Sir Robert Napier. In 1868, British forces reached Tewodros's mountain fortress at Magdala. Rather than surrender, Tewodros took his own life with a pistol given to him by Queen Victoria years earlier. The British looted Magdala — taking manuscripts, crowns, and artifacts now scattered in museums across Europe — and left. Ethiopia fell back into civil war."},
-    {"type":"quote","body":"I know my country is in the hands of a man who has the courage and vision to lead it — if only the world would let him.","attribution":"— British traveler Henry Dufton, on Tewodros II, 1867"}
+    {
+      "type": "text",
+      "title": "The Rise of Kassa",
+      "body": "Born Kassa Hailu, the son of a minor nobleman, Tewodros rose from obscurity through sheer military brilliance. He defeated warlord after warlord, and in 1855, he was crowned Emperor Tewodros II in the ancient church of Derasge. His coronation name was deliberate: an Ethiopian prophecy foretold that a king named Tewodros would restore the empire's greatness. From the moment he took the throne, he set out to prove the prophecy true."
+    },
+    {
+      "type": "text",
+      "title": "The Reformer",
+      "body": "Tewodros was Ethiopia's first modernizer. He sought to abolish the slave trade, centralize taxation, create a standing national army (rather than relying on feudal levies), and build roads connecting the empire. He imported firearms, established an armory, and invited European craftsmen and missionaries to his court. His vision was a unified, modern Ethiopia that could stand as an equal among nations. But his methods were brutal \u2014 he crushed opposition with overwhelming force, earning him both fear and the epithet 'the mad king' among his enemies."
+    },
+    {
+      "type": "text",
+      "title": "Tragedy at Magdala",
+      "body": "Tewodros's downfall came from his dealings with Britain. In 1862, he wrote to Queen Victoria proposing an alliance \u2014 and received no reply. Enraged, he imprisoned the British consul and several European missionaries. Britain responded with a military expedition of 13,000 soldiers led by Sir Robert Napier. In 1868, British forces reached Tewodros's mountain fortress at Magdala. Rather than surrender, Tewodros took his own life with a pistol given to him by Queen Victoria years earlier. The British looted Magdala \u2014 taking manuscripts, crowns, and artifacts now scattered in museums across Europe \u2014 and left. Ethiopia fell back into civil war."
+    },
+    {
+      "type": "quote",
+      "body": "I know my country is in the hands of a man who has the courage and vision to lead it \u2014 if only the world would let him.",
+      "attribution": "\u2014 British traveler Henry Dufton, on Tewodros II, 1867"
+    }
   ]
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'services/content_service.dart';
+import 'services/app_state.dart';
 import 'theme/app_theme.dart';
 import 'screens/home_screen.dart';
 
@@ -12,6 +13,7 @@ class EthiopianChroniclesApp extends StatefulWidget {
 
 class _EthiopianChroniclesAppState extends State<EthiopianChroniclesApp> {
   final ContentService _content = ContentService();
+  final AppState _appState = AppState();
   bool _loading = true;
 
   @override
@@ -27,13 +29,16 @@ class _EthiopianChroniclesAppState extends State<EthiopianChroniclesApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Ethiopian Chronicles',
-      debugShowCheckedModeBanner: false,
-      theme: AppTheme.darkTheme,
-      home: _loading
-          ? const _LoadingScreen()
-          : HomeScreen(content: _content),
+    return ListenableBuilder(
+      listenable: _appState,
+      builder: (context, _) => MaterialApp(
+        title: 'Ethiopian Chronicles',
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme.darkTheme,
+        home: _loading
+            ? const _LoadingScreen()
+            : HomeScreen(content: _content, appState: _appState),
+      ),
     );
   }
 }
@@ -49,15 +54,21 @@ class _LoadingScreen extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Container(
-              width: 80, height: 80,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: AppTheme.aksumGold.withOpacity(0.1),
-                border: Border.all(color: AppTheme.aksumGold.withOpacity(0.3), width: 1),
-              ),
-              child: const Center(
-                child: Icon(Icons.account_balance, color: AppTheme.aksumGold, size: 36),
+            TweenAnimationBuilder<double>(
+              tween: Tween(begin: 0.8, end: 1.0),
+              duration: const Duration(seconds: 2),
+              curve: Curves.elasticOut,
+              builder: (_, val, __) => Transform.scale(
+                scale: val,
+                child: Container(
+                  width: 80, height: 80,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(18),
+                    color: AppTheme.aksumGold.withOpacity(0.08),
+                    border: Border.all(color: AppTheme.aksumGold.withOpacity(0.2), width: 1),
+                  ),
+                  child: const Icon(Icons.account_balance, color: AppTheme.aksumGold, size: 36),
+                ),
               ),
             ),
             const SizedBox(height: 32),
@@ -66,11 +77,7 @@ class _LoadingScreen extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: AppTheme.textPrimary,
-                fontSize: 22,
-                fontFamily: 'serif',
-                fontWeight: FontWeight.w900,
-                letterSpacing: 4,
-                height: 1.3,
+                fontSize: 22, fontFamily: 'serif', fontWeight: FontWeight.w900, letterSpacing: 4, height: 1.3,
               ),
             ),
             const SizedBox(height: 24),
@@ -78,30 +85,22 @@ class _LoadingScreen extends StatelessWidget {
               width: 200,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(6),
-                child: LinearProgressIndicator(
-                  backgroundColor: AppTheme.surfaceLight,
-                  color: AppTheme.aksumGold,
-                  minHeight: 2,
+                child: TweenAnimationBuilder<double>(
+                  tween: Tween(begin: 0.0, end: 1.0),
+                  duration: const Duration(seconds: 3),
+                  builder: (_, val, __) => LinearProgressIndicator(
+                    value: val, backgroundColor: AppTheme.surfaceLight,
+                    color: AppTheme.aksumGold, minHeight: 2,
+                  ),
                 ),
               ),
             ),
             const SizedBox(height: 12),
-            Text(
-              'Unearthing the past...',
-              style: TextStyle(color: AppTheme.textMuted, fontSize: 12, fontFamily: 'monospace', letterSpacing: 2),
-            ),
+            const Text('Unearthing the past...',
+                style: TextStyle(color: AppTheme.textMuted, fontSize: 12, fontFamily: 'monospace', letterSpacing: 2)),
           ],
         ),
       ),
     );
   }
-}
-
-// Re-export theme for app-wide access
-class AppColors {
-  static const background = AppTheme.background;
-  static const surface = AppTheme.surface;
-  static const aksumGold = AppTheme.aksumGold;
-  static const textPrimary = AppTheme.textPrimary;
-  static const textSecondary = AppTheme.textSecondary;
 }
