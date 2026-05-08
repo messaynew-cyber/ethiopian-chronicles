@@ -90,7 +90,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     ),
   );
 
-  Widget _switchTile(String title, String subtitle, bool value, VoidCallback onChanged) => Container(
+  Widget _switchTile(String title, String subtitle, bool value, ValueChanged<bool> onChanged) => Container(
     margin: const EdgeInsets.only(bottom: 6), decoration: AppTheme.glassCard(),
     child: SwitchListTile(
       title: Text(title, style: const TextStyle(color: AppTheme.textPrimary, fontSize: 13)),
