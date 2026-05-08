@@ -70,6 +70,7 @@ class Chapter {
   final String? narrationUrlAm;
   final List<ChapterSection> sections;
   final List<String> keyFigures;
+  final List<ChapterSection>? sectionsAm;
   final bool isFree;
 
   const Chapter({
@@ -84,6 +85,7 @@ class Chapter {
     this.narrationUrlAm,
     this.sections = const [],
     this.keyFigures = const [],
+    this.sectionsAm,
     this.isFree = false,
   });
 
@@ -98,6 +100,9 @@ class Chapter {
     narrationUrl: json['narration_url'],
     narrationUrlAm: json['narration_url_am'],
     sections: (json['sections'] as List? ?? [])
+        .map((s) => ChapterSection.fromJson(s))
+        .toList(),
+    sectionsAm: (json['sections_am'] as List? ?? [])
         .map((s) => ChapterSection.fromJson(s))
         .toList(),
     keyFigures: List<String>.from(json['key_figures'] ?? []),

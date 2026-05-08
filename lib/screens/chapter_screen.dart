@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 import '../models/chapter.dart';
 import '../services/content_service.dart';
 import '../services/app_state.dart';
@@ -17,8 +18,9 @@ class ChapterScreen extends StatefulWidget {
 
 class _ChapterScreenState extends State<ChapterScreen> with TickerProviderStateMixin {
   final ScrollController _scrollController = ScrollController();
+  final FlutterTts _tts = FlutterTts();
   double _progress = 0;
-  bool _isPlaying = false;
+  bool _isSpeaking = false;
   late AnimationController _sectionAnimCtrl;
   late AnimationController _headerAnimCtrl;
 
@@ -30,6 +32,8 @@ class _ChapterScreenState extends State<ChapterScreen> with TickerProviderStateM
     _headerAnimCtrl = AnimationController(vsync: this, duration: const Duration(milliseconds: 600));
     _headerAnimCtrl.forward();
     Future.delayed(const Duration(milliseconds: 200), () => _sectionAnimCtrl.forward());
+    _tts.setCompletionHandler(() => setState(() => _isSpeaking = false));
+    _tts.setErrorHandler((_) => setState(() => _isSpeaking = false));
   }
 
   @override
@@ -46,17 +50,43 @@ class _ChapterScreenState extends State<ChapterScreen> with TickerProviderStateM
     if (max > 0) setState(() => _progress = (_scrollController.offset / max).clamp(0.0, 1.0));
   }
 
-  void _toggleNarration() {
+  @override
+  void dispose() {
+    _scrollController.removeListener(_onScroll);
+    _scrollController.dispose();
+    _sectionAnimCtrl.dispose();
+    _headerAnimCtrl.dispose();
+    _tts.stop();
+    super.dispose();
+  }
+
+  void _onScroll() {
+    final max = _scrollController.position.maxScrollExtent;
+    if (max > 0) setState(() => _progress = (_scrollController.offset / max).clamp(0.0, 1.0));
+  }
+
+  Future<void> _toggleNarration() async {
     HapticFeedback.lightImpact();
-    setState(() => _isPlaying = !_isPlaying);
-    if (_isPlaying) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(widget.appState.t('🔊 Narrating...', '🔊 በማተረክ ላይ...')),
-          duration: const Duration(seconds: 2),
-          backgroundColor: AppTheme.surface,
-        ),
-      );
+    if (_isSpeaking) {
+      await _tts.stop();
+      setState(() => _isSpeaking = false);
+    } else {
+      // Build full narration text from all sections
+      final a = widget.appState;
+      final buffer = StringBuffer();
+      buffer.writeln(a.t(widget.chapter.title, widget.chapter.title));
+      buffer.writeln();
+      for (final section in widget.chapter.sections) {
+        if (section.body != null) {
+          buffer.writeln(section.body);
+          buffer.writeln();
+        }
+      }
+      await _tts.setLanguage(a.amharicMode ? 'am-ET' : 'en-US');
+      await _tts.setSpeechRate(0.45);
+      await _tts.setPitch(1.0);
+      await _tts.speak(buffer.toString());
+      setState(() => _isSpeaking = true);
     }
   }
 
@@ -183,6 +213,10 @@ class _ChapterScreenState extends State<ChapterScreen> with TickerProviderStateM
                 sliver: SliverList(
                   delegate: SliverChildBuilderDelegate(
                     (context, index) {
+                      // Use Amharic sections if available and in Amharic mode
+                      final sections = (a.amharicMode && chapter.sectionsAm != null && chapter.sectionsAm!.isNotEmpty)
+                          ? chapter.sectionsAm!
+                          : chapter.sections;
                       final delay = index * 0.15;
                       final anim = CurvedAnimation(
                         parent: _sectionAnimCtrl,
@@ -197,10 +231,10 @@ class _ChapterScreenState extends State<ChapterScreen> with TickerProviderStateM
                             child: child,
                           ),
                         ),
-                        child: _buildSection(chapter.sections[index], eraColor),
+                        child: _buildSection(sections[index], eraColor),
                       );
                     },
-                    childCount: chapter.sections.length,
+                    childCount: sections.length,
                   ),
                 ),
               ),
@@ -234,7 +268,7 @@ class _ChapterScreenState extends State<ChapterScreen> with TickerProviderStateM
           // Narration FAB with pulse animation
           Positioned(
             right: 20, bottom: 100,
-            child: _isPlaying
+            child: _isSpeaking
                 ? _PulseAnimation(child: _narrationFab(eraColor))
                 : _narrationFab(eraColor),
           ),
@@ -264,10 +298,10 @@ class _ChapterScreenState extends State<ChapterScreen> with TickerProviderStateM
 
   Widget _narrationFab(Color color) => FloatingActionButton(
     heroTag: 'narration',
-    backgroundColor: _isPlaying ? color : AppTheme.surface,
+    backgroundColor: _isSpeaking ? color : AppTheme.surface,
     onPressed: _toggleNarration,
-    child: Icon(_isPlaying ? Icons.pause_rounded : Icons.headphones_rounded,
-        color: _isPlaying ? AppTheme.background : AppTheme.textSecondary, size: 22),
+    child: Icon(_isSpeaking ? Icons.pause_rounded : Icons.headphones_rounded,
+        color: _isSpeaking ? AppTheme.background : AppTheme.textSecondary, size: 22),
   );
 
   Widget _buildSection(ChapterSection section, Color color) {

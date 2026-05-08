@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
-    <!-- Ethiopian flag stripes -->
-    <path android:fillColor="#078930" android:pathData="M0,0h108v36H0z"/>
-    <path android:fillColor="#FCDD09" android:pathData="M0,36h108v36H0z"/>
-    <path android:fillColor="#DA121A" android:pathData="M0,72h108v36H0z"/>
-    <!-- Gold circle in center (sun/cross emblem) -->
-    <path android:fillColor="#D4A843" android:pathData="M54,40a14,14 0,1 0,0,28a14,14 0,0 0,0-28z"/>
-    <!-- Cross inside circle -->
-    <path android:fillColor="#07070d" android:pathData="M52,44h4v6h6v4h-6v6h-4v-6h-6v-4h6z"/>
-    <!-- Title text area at bottom -->
-    <path android:fillColor="#07070d" android:pathData="M0,90h108v18H0z"/>
-</vector>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#0F0F12"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/logo"/>
+</layer-list>
