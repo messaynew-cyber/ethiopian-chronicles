@@ -261,7 +261,7 @@ void _onScroll() {
           Positioned(
             right: 20, bottom: 100,
             child: _isSpeaking
-                ? _PulseAnimation(child: _narrationFab(eraColor))
+                ? _narrationFab(eraColor)
                 : _narrationFab(eraColor),
           ),
 
@@ -270,11 +270,10 @@ void _onScroll() {
             child: Container(
               height: 3,
               color: Colors.white.withOpacity(0.04),
-              child: AnimatedFractionallySizedBox(
-                duration: const Duration(milliseconds: 200),
-                alignment: Alignment.centerLeft,
-                widthFactor: _progress,
-                child: Container(
+              child: FractionallySizedBox(
+            alignment: Alignment.centerLeft,
+            widthFactor: _progress,
+            child: Container(
                   decoration: BoxDecoration(
                     color: AppTheme.accent,
                     boxShadow: [BoxShadow(color: AppTheme.accent.withOpacity(0.3), blurRadius: 4)],
@@ -371,15 +370,6 @@ void _onScroll() {
     }
   }
 }
-
-class _PulseAnimation extends StatefulWidget {
-  final Widget child;
-  const _PulseAnimation({required this.child});
-
-  @override
-  State<_PulseAnimation> createState() => _PulseAnimationState();
-}
-
 class _PulseAnimationState extends State<_PulseAnimation> with SingleTickerProviderStateMixin {
   late AnimationController _ctrl;
 
@@ -397,37 +387,4 @@ class _PulseAnimationState extends State<_PulseAnimation> with SingleTickerProvi
       child: widget.child,
     );
   }
-}
-
-class AnimatedFractionallySizedBox extends StatelessWidget {
-  final Duration duration;
-  final AlignmentGeometry alignment;
-  final double widthFactor;
-  final Widget child;
-  const AnimatedFractionallySizedBox({
-    super.key, required this.duration, required this.alignment,
-    required this.widthFactor, required this.child,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return TweenAnimationBuilder<double>(
-      tween: Tween(begin: 0, end: widthFactor),
-      duration: duration,
-      curve: Curves.easeOut,
-      builder: (_, val, child) => FractionallySizedBox(
-        alignment: alignment, widthFactor: val, child: child,
-      ),
-      child: child,
-    );
-  }
-}
-
-class SectionAnimator extends AnimatedWidget {
-  final Widget? child;
-  final TransitionBuilder builder;
-  const SectionAnimator({super.key, required super.listenable, required this.builder, this.child});
-
-  @override
-  Widget build(BuildContext context) => builder(context, child);
 }
