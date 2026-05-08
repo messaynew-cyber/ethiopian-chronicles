@@ -74,14 +74,12 @@ class _TimelineWidgetState extends State<TimelineWidget> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      // Connecting line (left half)
+                      // Connecting line indicator
                       if (index > 0)
-                        Positioned(
-                          child: Container(
-                            height: 1,
-                            width: (_spacing - _nodeSize) / 2,
-                            color: isSelected ? color : Colors.white10,
-                          ),
+                        Container(
+                          height: 1,
+                          width: (_spacing - _nodeSize) / 2,
+                          color: isSelected ? color : Colors.white10,
                         ),
 
                       // Era node
