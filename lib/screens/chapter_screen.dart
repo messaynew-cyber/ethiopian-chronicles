@@ -77,7 +77,7 @@ class _ChapterScreenState extends State<ChapterScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const SizedBox(height: 40),
-                          Text(AppTheme.eraEmoji(chapter.eraId), style: const TextStyle(fontSize: 48)),
+                          Icon(AppTheme.eraIcon(chapter.eraId), color: eraColor, size: 48),
                           const SizedBox(height: 16),
                           Text(chapter.title, style: const TextStyle(
                             color: AppTheme.textPrimary, fontSize: 28,
