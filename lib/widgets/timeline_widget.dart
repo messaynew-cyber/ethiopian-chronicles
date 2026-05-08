@@ -20,28 +20,19 @@ class TimelineWidget extends StatefulWidget {
 
 class _TimelineWidgetState extends State<TimelineWidget> {
   late ScrollController _controller;
-  final double _nodeSize = 56;
-  final double _spacing = 120;
 
   @override
   void initState() {
     super.initState();
     _controller = ScrollController();
-    // Scroll to selected era
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      _scrollToSelected();
-    });
+    WidgetsBinding.instance.addPostFrameCallback((_) => _scrollToSelected());
   }
 
   void _scrollToSelected() {
     final index = widget.eras.indexWhere((e) => e.id == widget.selectedEraId);
     if (index >= 0) {
-      final offset = index * _spacing - 40;
-      _controller.animateTo(
-        offset.clamp(0.0, _controller.position.maxScrollExtent),
-        duration: const Duration(milliseconds: 400),
-        curve: Curves.easeOutExpo,
-      );
+      final offset = (index * 100.0 - 40).clamp(0.0, _controller.position.maxScrollExtent);
+      _controller.animateTo(offset, duration: const Duration(milliseconds: 400), curve: Curves.easeOutExpo);
     }
   }
 
@@ -59,7 +50,7 @@ class _TimelineWidgetState extends State<TimelineWidget> {
           child: ListView.builder(
             controller: _controller,
             scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
             itemCount: widget.eras.length,
             itemBuilder: (context, index) {
               final era = widget.eras[index];
@@ -69,61 +60,64 @@ class _TimelineWidgetState extends State<TimelineWidget> {
               return GestureDetector(
                 onTap: () => widget.onEraSelected(era.id),
                 child: Container(
-                  width: _spacing,
-                  margin: const EdgeInsets.only(right: 4),
+                  width: 90,
+                  margin: const EdgeInsets.symmetric(horizontal: 4),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      // Connecting line indicator
-                      if (index > 0)
-                        Container(
-                          height: 1,
-                          width: (_spacing - _nodeSize) / 2,
-                          color: isSelected ? color : Colors.white10,
-                        ),
-
-                      // Era node
+                      // Era icon in glass container
                       AnimatedContainer(
-                        duration: const Duration(milliseconds: 300),
-                        width: _nodeSize,
-                        height: _nodeSize,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: isSelected ? color.withOpacity(0.12) : Colors.white.withOpacity(0.02),
-                          border: Border.all(
-                            color: isSelected ? color.withOpacity(0.6) : Colors.white10,
-                            width: isSelected ? 2 : 1,
-                          ),
-                          boxShadow: isSelected
-                              ? [BoxShadow(color: color.withOpacity(0.3), blurRadius: 16)]
-                              : [],
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(AppTheme.eraEmoji(era.id), style: TextStyle(
-                                fontSize: isSelected ? 20 : 16)),
-                          ],
+                        duration: const Duration(milliseconds: 350),
+                        curve: Curves.easeOutExpo,
+                        width: 52,
+                        height: 52,
+                        decoration: isSelected
+                            ? BoxDecoration(
+                                color: color.withOpacity(0.12),
+                                borderRadius: BorderRadius.circular(14),
+                                border: Border.all(color: color.withOpacity(0.4), width: 1.2),
+                                boxShadow: [
+                                  BoxShadow(color: color.withOpacity(0.15), blurRadius: 12, spreadRadius: -2),
+                                ],
+                              )
+                            : BoxDecoration(
+                                color: Colors.white.withOpacity(0.03),
+                                borderRadius: BorderRadius.circular(12),
+                                border: Border.all(color: Colors.white.withOpacity(0.06), width: 0.8),
+                              ),
+                        child: Icon(
+                          AppTheme.eraIcon(era.id),
+                          color: isSelected ? color : AppTheme.textMuted,
+                          size: isSelected ? 24 : 20,
                         ),
                       ),
-
-                      const SizedBox(height: 8),
-
+                      const SizedBox(height: 10),
                       // Era name
                       AnimatedDefaultTextStyle(
                         duration: const Duration(milliseconds: 300),
                         style: TextStyle(
                           color: isSelected ? AppTheme.textPrimary : AppTheme.textMuted,
-                          fontSize: isSelected ? 11 : 10,
+                          fontSize: 10,
                           fontFamily: 'monospace',
                           fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400,
-                          letterSpacing: 1,
+                          letterSpacing: 1.2,
+                          height: 1.3,
                         ),
                         textAlign: TextAlign.center,
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
-                        child: Text(era.name.split(' ').join('\n')),
+                        child: Text(era.name),
                       ),
+                      // Amharic name below
+                      if (AppTheme.eraAmharic(era.id).isNotEmpty)
+                        Text(
+                          AppTheme.eraAmharic(era.id),
+                          style: TextStyle(
+                            color: isSelected ? color.withOpacity(0.6) : Colors.white24,
+                            fontSize: 8,
+                            fontFamily: 'serif',
+                          ),
+                        ),
                     ],
                   ),
                 ),
@@ -131,25 +125,26 @@ class _TimelineWidgetState extends State<TimelineWidget> {
             },
           ),
         ),
-
-        // Selected indicator dot row
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: widget.eras.map((e) {
-            final isSelected = e.id == widget.selectedEraId;
-            return AnimatedContainer(
-              duration: const Duration(milliseconds: 300),
-              margin: const EdgeInsets.symmetric(horizontal: 3),
-              width: isSelected ? 16 : 6,
-              height: 6,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(3),
-                color: isSelected ? Color(e.color) : Colors.white10,
-              ),
-            );
-          }).toList(),
+        // Dot indicators
+        Padding(
+          padding: const EdgeInsets.only(bottom: 6),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: widget.eras.map((e) {
+              final isSelected = e.id == widget.selectedEraId;
+              return AnimatedContainer(
+                duration: const Duration(milliseconds: 300),
+                margin: const EdgeInsets.symmetric(horizontal: 2),
+                width: isSelected ? 20 : 5,
+                height: 5,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(3),
+                  color: isSelected ? Color(e.color).withOpacity(0.6) : Colors.white10,
+                ),
+              );
+            }).toList(),
+          ),
         ),
-        const SizedBox(height: 8),
       ],
     );
   }

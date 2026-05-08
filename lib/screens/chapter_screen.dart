@@ -260,7 +260,7 @@ class _ChapterScreenState extends State<ChapterScreen> {
                 ),
               Text(section.body ?? '', style: const TextStyle(
                 color: AppTheme.textPrimary, fontSize: 16, height: 1.85,
-                fontFamily: 'serif',
+                fontFamily: 'serif', letterSpacing: 0.2,
               )),
             ],
           ),

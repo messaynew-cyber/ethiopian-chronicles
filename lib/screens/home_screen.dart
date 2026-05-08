@@ -17,33 +17,18 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   String _selectedEraId = 'aksumite';
-  late PageController _pageController;
-  int _currentPage = 0;
-
-  @override
-  void initState() {
-    super.initState();
-    _pageController = PageController(viewportFraction: 0.88);
-  }
-
-  @override
-  void dispose() {
-    _pageController.dispose();
-    super.dispose();
-  }
 
   void _onEraSelected(String eraId) {
     setState(() => _selectedEraId = eraId);
-    final eraIndex = widget.content.eras.indexWhere((e) => e.id == eraId);
-    if (eraIndex >= 0 && eraIndex < widget.content.eras.length) {
-      _pageController.animateToPage(eraIndex,
-          duration: const Duration(milliseconds: 500), curve: Curves.easeOutExpo);
-    }
   }
 
   void _openChapter(Chapter chapter) {
-    Navigator.push(context, MaterialPageRoute(
-      builder: (_) => ChapterScreen(chapter: chapter, content: widget.content),
+    Navigator.push(context, PageRouteBuilder(
+      pageBuilder: (_, __, ___) => ChapterScreen(chapter: chapter, content: widget.content),
+      transitionsBuilder: (_, animation, __, child) {
+        return FadeTransition(opacity: animation, child: child);
+      },
+      transitionDuration: const Duration(milliseconds: 400),
     ));
   }
 
@@ -54,101 +39,126 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       backgroundColor: AppTheme.background,
-      body: SafeArea(
-        child: Column(
-          children: [
-            // Header
-            Padding(
-              padding: const EdgeInsets.fromLTRB(20, 16, 20, 8),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('ETHIOPIAN', style: TextStyle(
-                        color: AppTheme.textPrimary, fontSize: 22,
-                        fontFamily: 'serif', fontWeight: FontWeight.w900, letterSpacing: 4,
-                      )),
-                      Text('CHRONICLES', style: TextStyle(
-                        color: AppTheme.aksumGold, fontSize: 14,
-                        fontFamily: 'monospace', letterSpacing: 6, fontWeight: FontWeight.w600,
-                      )),
-                    ],
-                  ),
-                  IconButton(
-                    icon: const Icon(Icons.tune, color: AppTheme.textMuted, size: 20),
-                    onPressed: () => Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => SettingsScreen(content: widget.content))),
-                  ),
-                ],
-              ),
+      body: Stack(
+        children: [
+          // Subtle parchment texture overlay
+          Positioned.fill(
+            child: IgnorePointer(
+              child: Container(decoration: AppTheme.parchmentOverlay()),
             ),
-
-            // Timeline
-            SizedBox(
-              height: 100,
-              child: TimelineWidget(
-                eras: widget.content.eras,
-                selectedEraId: _selectedEraId,
-                onEraSelected: _onEraSelected,
-              ),
-            ),
-
-            // Era description
-            if (era != null)
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-                child: Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.all(16),
-                  decoration: AppTheme.glassCard(borderColor: Color(era.color)),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+          ),
+          SafeArea(
+            child: Column(
+              children: [
+                // Header
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(24, 12, 20, 4),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Row(
+                      const Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(AppTheme.eraEmoji(era.id), style: const TextStyle(fontSize: 20)),
-                          const SizedBox(width: 10),
-                          Expanded(
-                            child: Text(era.name,
-                                style: TextStyle(color: Color(era.color), fontSize: 18,
-                                    fontFamily: 'serif', fontWeight: FontWeight.w700)),
-                          ),
-                          Text('${era.startYear} – ${era.endYear} CE',
-                              style: const TextStyle(color: AppTheme.textMuted, fontSize: 11,
-                                  fontFamily: 'monospace')),
+                          Text('ETHIOPIAN', style: TextStyle(
+                            color: AppTheme.textPrimary, fontSize: 20,
+                            fontFamily: 'serif', fontWeight: FontWeight.w900, letterSpacing: 3,
+                          )),
+                          Text('CHRONICLES', style: TextStyle(
+                            color: AppTheme.aksumGold, fontSize: 11,
+                            fontFamily: 'monospace', letterSpacing: 5, fontWeight: FontWeight.w600,
+                          )),
                         ],
                       ),
-                      const SizedBox(height: 8),
-                      Text(era.description,
-                          style: const TextStyle(color: AppTheme.textSecondary, fontSize: 13, height: 1.5)),
+                      IconButton(
+                        icon: const Icon(Icons.tune, color: AppTheme.textMuted, size: 18),
+                        onPressed: () => Navigator.push(context,
+                            MaterialPageRoute(builder: (_) => SettingsScreen(content: widget.content))),
+                      ),
                     ],
                   ),
                 ),
-              ),
 
-            // Chapters list
-            Expanded(
-              child: chapters.isEmpty
-                  ? const Center(child: Text('Coming soon...',
-                      style: TextStyle(color: AppTheme.textMuted)))
-                  : ListView.builder(
-                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-                      itemCount: chapters.length,
-                      itemBuilder: (context, index) {
-                        final ch = chapters[index];
-                        final isLocked = !ch.isFree;
-                        return _ChapterCard(
-                          chapter: ch,
-                          locked: isLocked,
-                          onTap: () => _openChapter(ch),
-                        );
-                      },
+                // Timeline — glassmorphism icons
+                SizedBox(
+                  height: 110,
+                  child: TimelineWidget(
+                    eras: widget.content.eras,
+                    selectedEraId: _selectedEraId,
+                    onEraSelected: _onEraSelected,
+                  ),
+                ),
+
+                // Era description card — centered icon, cream/gold title
+                if (era != null)
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 6),
+                    child: Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.fromLTRB(20, 20, 20, 16),
+                      decoration: AppTheme.glassCard(
+                        borderColor: Color(era.color),
+                        opacity: 0.08,
+                      ),
+                      child: Column(
+                        children: [
+                          // Centered icon
+                          Icon(AppTheme.eraIcon(era.id),
+                              color: Color(era.color).withOpacity(0.7), size: 28),
+                          const SizedBox(height: 10),
+                          // Date label ABOVE title
+                          Text(
+                            '${era.startYear} – ${era.endYear} CE',
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              color: AppTheme.textMuted, fontSize: 10,
+                              fontFamily: 'monospace', letterSpacing: 2,
+                            ),
+                          ),
+                          const SizedBox(height: 6),
+                          // Title in warm cream
+                          Text(
+                            era.name,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: AppTheme.textTitle, fontSize: 20,
+                              fontFamily: 'serif', fontWeight: FontWeight.w700,
+                              letterSpacing: 1,
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            era.description,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              color: AppTheme.textSecondary, fontSize: 13, height: 1.55, letterSpacing: 0.2,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
+                  ),
+
+                // Chapters
+                Expanded(
+                  child: chapters.isEmpty
+                      ? const Center(child: Text('Coming soon...',
+                          style: TextStyle(color: AppTheme.textMuted)))
+                      : ListView.builder(
+                          padding: const EdgeInsets.fromLTRB(20, 8, 20, 20),
+                          itemCount: chapters.length,
+                          itemBuilder: (context, index) {
+                            final ch = chapters[index];
+                            return _ChapterCard(
+                              chapter: ch,
+                              onTap: () => _openChapter(ch),
+                            );
+                          },
+                        ),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -156,73 +166,128 @@ class _HomeScreenState extends State<HomeScreen> {
 
 class _ChapterCard extends StatelessWidget {
   final Chapter chapter;
-  final bool locked;
   final VoidCallback onTap;
 
-  const _ChapterCard({required this.chapter, required this.locked, required this.onTap});
+  const _ChapterCard({required this.chapter, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     final color = AppTheme.eraColor(chapter.eraId);
+    final locked = !chapter.isFree;
+
     return Padding(
-      padding: const EdgeInsets.only(bottom: 12),
+      padding: const EdgeInsets.only(bottom: 10),
       child: GestureDetector(
         onTap: locked ? null : onTap,
         child: locked
-            ? Shimmer.fromColors(
-                baseColor: AppTheme.surface,
-                highlightColor: AppTheme.surfaceLight,
-                child: _cardContent(color, locked),
-              )
+            ? _LockedCard(color: color, title: chapter.title, subtitle: '${chapter.location} • ${chapter.yearStart} CE')
             : Hero(
                 tag: 'chapter_${chapter.id}',
                 child: Material(
                   type: MaterialType.transparency,
-                  child: _cardContent(color, locked),
+                  child: _UnlockedCard(color: color, chapter: chapter),
                 ),
               ),
       ),
     );
   }
+}
 
-  Widget _cardContent(Color color, bool locked) {
+class _UnlockedCard extends StatelessWidget {
+  final Color color;
+  final Chapter chapter;
+  const _UnlockedCard({required this.color, required this.chapter});
+
+  @override
+  Widget build(BuildContext context) {
     return AnimatedContainer(
-      duration: const Duration(milliseconds: 400),
+      duration: const Duration(milliseconds: 300),
       curve: Curves.easeOutExpo,
       padding: const EdgeInsets.all(18),
-      decoration: AppTheme.glassCard(borderColor: locked ? Colors.white10 : color),
+      decoration: AppTheme.glassCard(borderColor: color, opacity: 0.08),
       child: Row(
         children: [
-          AnimatedContainer(
-            duration: const Duration(milliseconds: 300),
-            width: 44, height: 44,
+          Container(
+            width: 42, height: 42,
             decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: (locked ? Colors.white10 : color).withOpacity(locked ? 0.05 : 0.1),
-              border: Border.all(color: (locked ? Colors.white10 : color).withOpacity(locked ? 0.15 : 0.3)),
+              borderRadius: BorderRadius.circular(10),
+              color: color.withOpacity(0.08),
+              border: Border.all(color: color.withOpacity(0.25), width: 1),
             ),
-            child: Center(
-              child: locked
-                  ? const Icon(Icons.lock, color: AppTheme.textMuted, size: 16)
-                  : Icon(Icons.menu_book, color: color, size: 18),
-            ),
+            child: Icon(Icons.menu_book_rounded, color: color.withOpacity(0.7), size: 20),
           ),
-          const SizedBox(width: 16),
+          const SizedBox(width: 14),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(chapter.title, style: TextStyle(
-                  color: locked ? AppTheme.textMuted : AppTheme.textPrimary,
-                  fontSize: 16, fontFamily: 'serif', fontWeight: FontWeight.w600,
+                  color: AppTheme.textTitle, fontSize: 15,
+                  fontFamily: 'serif', fontWeight: FontWeight.w600,
                 )),
-                const SizedBox(height: 4),
-                Text('${chapter.location} • ${chapter.yearStart} CE',
-                    style: const TextStyle(color: AppTheme.textMuted, fontSize: 11, fontFamily: 'monospace')),
+                const SizedBox(height: 3),
+                Text(
+                  '${chapter.location} • ${chapter.yearStart} CE',
+                  style: const TextStyle(color: AppTheme.textMuted, fontSize: 10, fontFamily: 'monospace', letterSpacing: 1),
+                ),
               ],
             ),
           ),
-          Icon(Icons.chevron_right, color: locked ? AppTheme.textMuted : color, size: 20),
+          Icon(Icons.chevron_right_rounded, color: color.withOpacity(0.4), size: 22),
+        ],
+      ),
+    );
+  }
+}
+
+class _LockedCard extends StatelessWidget {
+  final Color color;
+  final String title;
+  final String subtitle;
+
+  const _LockedCard({required this.color, required this.title, required this.subtitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(18),
+      decoration: AppTheme.frostedCard(tint: color),
+      child: Row(
+        children: [
+          Container(
+            width: 42, height: 42,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: Colors.white.withOpacity(0.03),
+              border: Border.all(color: Colors.white.withOpacity(0.08)),
+            ),
+            child: const Icon(Icons.lock_outline, color: AppTheme.textMuted, size: 18),
+          ),
+          const SizedBox(width: 14),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(title, style: const TextStyle(
+                  color: AppTheme.textSecondary, fontSize: 15,
+                  fontFamily: 'serif', fontWeight: FontWeight.w500,
+                )),
+                const SizedBox(height: 3),
+                Text(subtitle,
+                    style: const TextStyle(color: AppTheme.textMuted, fontSize: 10, fontFamily: 'monospace')),
+              ],
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(color: color.withOpacity(0.2)),
+            ),
+            child: Text('UNLOCK', style: TextStyle(
+                color: color.withOpacity(0.5), fontSize: 9,
+                fontFamily: 'monospace', fontWeight: FontWeight.w600, letterSpacing: 2)),
+          ),
         ],
       ),
     );

@@ -57,7 +57,7 @@ class _LoadingScreen extends StatelessWidget {
                 border: Border.all(color: AppTheme.aksumGold.withOpacity(0.3), width: 1),
               ),
               child: const Center(
-                child: Text('🏛️', style: TextStyle(fontSize: 36)),
+                child: Icon(Icons.account_balance, color: AppTheme.aksumGold, size: 36),
               ),
             ),
             const SizedBox(height: 32),
@@ -79,7 +79,7 @@ class _LoadingScreen extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(6),
                 child: LinearProgressIndicator(
-                  backgroundColor: AppTheme.stoneColor,
+                  backgroundColor: AppTheme.surfaceLight,
                   color: AppTheme.aksumGold,
                   minHeight: 2,
                 ),
