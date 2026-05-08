@@ -1,45 +1,40 @@
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  // OLED foundation
-  static const Color background = Color(0xFF07070d);
-  static const Color surface = Color(0xFF0d0d18);
-  static const Color surfaceLight = Color(0xFF161625);
-  static const Color cardGlass = Color(0x10ffffff);
+  // Architect's palette — deep charcoal foundation
+  static const Color background = Color(0xFF0F0F12);
+  static const Color surface = Color(0xFF1C1C21);
+  static const Color surfaceLight = Color(0xFF25252B);
+  static const Color cardActive = Color(0xFF1C1C21);
 
-  // Era accent colors (used sparingly — for active states, highlights)
-  static const Color aksumGold = Color(0xFFd4a843);
-  static const Color solomonicCrimson = Color(0xFFc41e3a);
-  static const Color gondarineAmber = Color(0xFFe8a838);
-  static const Color modernGreen = Color(0xFF2e7d32);
-  static const Color battleRed = Color(0xFFb71c1c);
+  // Accent — Antique Gold
+  static const Color accent = Color(0xFFD4AF37);
+  static const Color accentDim = Color(0xFFB8960A);
+  static const Color accentGlow = Color(0x30D4AF37);
 
-  // Text — bright and legible on OLED
-  static const Color textPrimary = Color(0xFFf5f3eb);    // warm cream
-  static const Color textTitle = Color(0xFFf0dfb8);      // warmer cream for titles
-  static const Color textSecondary = Color(0xFFb0ad9e);  // bright grey (was dim)
-  static const Color textMuted = Color(0xFF706d62);      // muted but readable
+  // Era-specific accent variations (still gold-based)
+  static const Color eraGold = Color(0xFFD4AF37);
+  static const Color eraCrimson = Color(0xFFA0522D);
+  static const Color eraAmber = Color(0xFFC8963E);
+  static const Color eraGreen = Color(0xFF5B8C5A);
+  static const Color eraRed = Color(0xFFC4554D);
 
-  // Glass / premium effects
-  static const Color glassBorder = Color(0x15ffffff);
-  static const Color glassBorderBright = Color(0x30ffffff);
-  static const Color glassFill = Color(0x0affffff);
+  // Text
+  static const Color textPrimary = Color(0xFFF5F5F0);
+  static const Color textTitle = Color(0xFFF5F5F0);
+  static const Color textSecondary = Color(0xFFC0BEB5);
+  static const Color textMuted = Color(0xFF7A7870);
 
-  // Achievements
-  static const Color achievementGold = Color(0xFFd4a843);
-  static const Color achievementSilver = Color(0xFFc0c0c0);
-  static const Color achievementBronze = Color(0xFFcd7f32);
-
-  // Parchment texture colors
-  static const Color parchmentBase = Color(0xFF07070d);
-  static const Color parchmentGrain = Color(0x03ffffff);
+  // Glass
+  static const Color glassBorder = Color(0x18FFFFFF);
+  static const Color glassFill = Color(0x08FFFFFF);
 
   static ThemeData get darkTheme => ThemeData(
     brightness: Brightness.dark,
     scaffoldBackgroundColor: background,
     colorScheme: const ColorScheme.dark(
-      primary: aksumGold,
-      secondary: solomonicCrimson,
+      primary: accent,
+      secondary: eraCrimson,
       surface: surface,
       background: background,
     ),
@@ -48,11 +43,7 @@ class AppTheme {
       elevation: 0,
       centerTitle: false,
       titleTextStyle: TextStyle(
-        color: textPrimary,
-        fontSize: 20,
-        fontFamily: 'serif',
-        fontWeight: FontWeight.w700,
-        letterSpacing: 1.5,
+        color: textPrimary, fontSize: 20, fontFamily: 'serif', fontWeight: FontWeight.w700, letterSpacing: 1.5,
       ),
     ),
     textTheme: const TextTheme(
@@ -67,49 +58,44 @@ class AppTheme {
     ),
   );
 
-  // Glass card with subtle border
-  static BoxDecoration glassCard({Color? borderColor, double opacity = 0.10}) => BoxDecoration(
+  static BoxDecoration glassCard({Color? borderColor, double opacity = 0.06}) => BoxDecoration(
     color: Colors.white.withOpacity(opacity),
     borderRadius: BorderRadius.circular(14),
-    border: Border.all(color: borderColor?.withOpacity(0.25) ?? glassBorder, width: 0.8),
+    border: Border.all(color: borderColor?.withOpacity(0.3) ?? glassBorder, width: 0.8),
   );
 
-  // Frosted glass for locked content — clearly visible as content
   static BoxDecoration frostedCard({Color? tint}) => BoxDecoration(
-    color: (tint ?? aksumGold).withOpacity(0.04),
+    color: (tint ?? accent).withOpacity(0.04),
     borderRadius: BorderRadius.circular(14),
     border: Border.all(color: Colors.white.withOpacity(0.08), width: 0.8),
   );
 
-  // Era-to-accent-color
   static Color eraColor(String eraId) {
     switch (eraId) {
-      case 'aksumite': return aksumGold;
-      case 'zagwe': return const Color(0xFF9b7ce8);
-      case 'solomonic': return solomonicCrimson;
-      case 'gondarine': return gondarineAmber;
-      case 'zemene': return const Color(0xFFa0802a);
-      case 'modern': return modernGreen;
-      case 'adwa': return battleRed;
-      default: return aksumGold;
+      case 'aksumite': return eraGold;
+      case 'zagwe': return const Color(0xFF9B8EC8);
+      case 'solomonic': return eraCrimson;
+      case 'gondarine': return eraAmber;
+      case 'zemene': return const Color(0xFFB8956E);
+      case 'modern': return eraGreen;
+      case 'adwa': return eraRed;
+      default: return accent;
     }
   }
 
-  // Custom icon paths — thin-line vector style, no emojis
   static IconData eraIcon(String eraId) {
     switch (eraId) {
       case 'aksumite': return Icons.account_balance;
-      case 'zagwe': return Icons.church;
+      case 'zagwe': return Icons.church_outlined;
       case 'solomonic': return Icons.local_fire_department;
-      case 'gondarine': return Icons.castle;
-      case 'zemene': return Icons.shield;
-      case 'modern': return Icons.flag;
+      case 'gondarine': return Icons.castle_outlined;
+      case 'zemene': return Icons.shield_outlined;
+      case 'modern': return Icons.flag_outlined;
       case 'adwa': return Icons.military_tech;
       default: return Icons.auto_stories;
     }
   }
 
-  // Era Amharic name
   static String eraAmharic(String eraId) {
     switch (eraId) {
       case 'aksumite': return 'አክሱም';
@@ -123,16 +109,10 @@ class AppTheme {
     }
   }
 
-  // Parchment texture — subtle noise pattern
   static BoxDecoration parchmentOverlay() => BoxDecoration(
     gradient: RadialGradient(
-      center: Alignment.topCenter,
-      radius: 1.5,
-      colors: [
-        parchmentGrain,
-        Colors.transparent,
-        Colors.transparent,
-      ],
+      center: Alignment.topCenter, radius: 1.5,
+      colors: [const Color(0x03FFFFFF), Colors.transparent, Colors.transparent],
     ),
   );
 }
