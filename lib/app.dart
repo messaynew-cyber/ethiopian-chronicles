@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'services/content_service.dart';
 import 'theme/app_theme.dart';
 import 'screens/home_screen.dart';
-import 'screens/settings_screen.dart';
 
 class EthiopianChroniclesApp extends StatefulWidget {
   const EthiopianChroniclesApp({super.key});

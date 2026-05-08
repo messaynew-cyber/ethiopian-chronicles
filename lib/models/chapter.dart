@@ -26,7 +26,7 @@ class Era {
     startYear: json['start_year'],
     endYear: json['end_year'],
     description: json['description'] ?? '',
-    color: int.parse(json['color'].toString().replaceFirst('#', '0xff')),
+    color: int.parse(json['color'].toString().replaceFirst('0x', ''), radix: 16),
     chapterIds: List<String>.from(json['chapter_ids'] ?? []),
   );
 }
