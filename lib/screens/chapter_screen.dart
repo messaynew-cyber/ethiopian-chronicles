@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_tts/flutter_tts.dart';
 import '../models/chapter.dart';
 import '../services/content_service.dart';
 import '../services/app_state.dart';
@@ -18,7 +17,7 @@ class ChapterScreen extends StatefulWidget {
 
 class _ChapterScreenState extends State<ChapterScreen> with TickerProviderStateMixin {
   final ScrollController _scrollController = ScrollController();
-  final FlutterTts _tts = FlutterTts();
+  static const _ttsChannel = MethodChannel('com.adwa.chronicles/tts');
   double _progress = 0;
   bool _isSpeaking = false;
   late AnimationController _sectionAnimCtrl;
@@ -32,8 +31,10 @@ class _ChapterScreenState extends State<ChapterScreen> with TickerProviderStateM
     _headerAnimCtrl = AnimationController(vsync: this, duration: const Duration(milliseconds: 600));
     _headerAnimCtrl.forward();
     Future.delayed(const Duration(milliseconds: 200), () => _sectionAnimCtrl.forward());
-    _tts.setCompletionHandler(() => setState(() => _isSpeaking = false));
-    _tts.setErrorHandler((_) => setState(() => _isSpeaking = false));
+    _ttsChannel.setMethodCallHandler((call) {
+      if (call.method == 'onDone') setState(() => _isSpeaking = false);
+      return Future.value();
+    });
   }
 
   @override
@@ -56,7 +57,7 @@ class _ChapterScreenState extends State<ChapterScreen> with TickerProviderStateM
     _scrollController.dispose();
     _sectionAnimCtrl.dispose();
     _headerAnimCtrl.dispose();
-    _tts.stop();
+    if (_isSpeaking) _ttsChannel.invokeMethod('stop');
     super.dispose();
   }
 
@@ -68,25 +69,27 @@ class _ChapterScreenState extends State<ChapterScreen> with TickerProviderStateM
   Future<void> _toggleNarration() async {
     HapticFeedback.lightImpact();
     if (_isSpeaking) {
-      await _tts.stop();
+      await _ttsChannel.invokeMethod('stop');
       setState(() => _isSpeaking = false);
     } else {
-      // Build full narration text from all sections
       final a = widget.appState;
       final buffer = StringBuffer();
       buffer.writeln(a.t(widget.chapter.title, widget.chapter.title));
       buffer.writeln();
       for (final section in widget.chapter.sections) {
-        if (section.body != null) {
-          buffer.writeln(section.body);
-          buffer.writeln();
-        }
+        if (section.body != null) { buffer.writeln(section.body); buffer.writeln(); }
       }
-      await _tts.setLanguage(a.amharicMode ? 'am-ET' : 'en-US');
-      await _tts.setSpeechRate(0.45);
-      await _tts.setPitch(1.0);
-      await _tts.speak(buffer.toString());
-      setState(() => _isSpeaking = true);
+      try {
+        await _ttsChannel.invokeMethod('speak', {
+          'text': buffer.toString(),
+          'language': a.amharicMode ? 'am' : 'en',
+        });
+        setState(() => _isSpeaking = true);
+      } catch (_) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(a.t('TTS not available', 'ድምጽ አይገኝም')), backgroundColor: AppTheme.surface),
+        );
+      }
     }
   }
 
