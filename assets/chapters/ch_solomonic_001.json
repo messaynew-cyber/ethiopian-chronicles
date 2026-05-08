@@ -1,0 +1,13 @@
+{
+  "id": "ch_solomonic_001", "era_id": "solomonic",
+  "title": "The Restoration of Solomon's Line",
+  "subtitle": "Yekuno Amlak and the Return of the Kings",
+  "year_start": 1270, "year_end": 1314,
+  "location": "Tegulet, Shewa", "is_free": false,
+  "key_figures": ["Yekuno Amlak", "Tekle Haymanot"],
+  "sections": [
+    {"type":"text","title":"The Return of the Dynasty","body":"For over 300 years, the Zagwe dynasty had ruled Ethiopia from Lalibela. But the legend of the Solomonic line — kings descended from Menelik I, the son of the Queen of Sheba and King Solomon — never died. In 1270, a nobleman named Yekuno Amlak, claiming Solomonic descent, launched a rebellion against the last Zagwe king, Yetbarak. With the support of the Ethiopian Orthodox Church and the influential monk Tekle Haymanot, Yekuno Amlak defeated Yetbarak and restored the dynasty that would rule Ethiopia for the next 700 years — until the overthrow of Haile Selassie in 1974."},
+    {"type":"text","title":"The Kebra Nagast","body":"The restoration of the Solomonic line was legitimized by Ethiopia's national epic, the Kebra Nagast (Glory of Kings). Compiled in the 14th century, this text weaves together biblical narrative, Ethiopian oral tradition, and political theology. It tells how the Queen of Sheba visited King Solomon in Jerusalem, how their son Menelik I was born, and how Menelik returned to Jerusalem to bring the Ark of the Covenant to Ethiopia — where, according to Ethiopian tradition, it resides to this day in the Church of Our Lady Mary of Zion in Aksum. The Kebra Nagast is not just a story; it is the foundation myth of the Ethiopian state."},
+    {"type":"quote","body":"Ethiopia shall stretch out her hands unto God.","attribution":"— Psalm 68:31, cited in the Kebra Nagast"}
+  ]
+}

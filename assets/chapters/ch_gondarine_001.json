@@ -1,0 +1,12 @@
+{
+  "id": "ch_gondarine_001", "era_id": "gondarine",
+  "title": "Fasil Ghebbi: Camelot of Africa", "subtitle": "Emperor Fasilides and the Gondar Renaissance",
+  "year_start": 1636, "year_end": 1667,
+  "location": "Gondar, Amhara", "is_free": false,
+  "key_figures": ["Emperor Fasilides"],
+  "sections": [
+    {"type":"text","title":"The Founding of Gondar","body":"In 1636, Emperor Fasilides established Gondar as Ethiopia's first permanent capital in centuries. Until then, Ethiopian emperors ruled from mobile encampments (katamas) that moved with the seasons and military campaigns. Fasilides broke with this tradition and built a city of stone — Fasil Ghebbi, the Royal Enclosure, a castle complex unlike anything else in sub-Saharan Africa. The architecture blended Ethiopian, Portuguese, Indian, and Ottoman influences, reflecting Gondar's position at the crossroads of trade routes connecting Africa, the Middle East, and the Indian Ocean."},
+    {"type":"text","title":"The Royal Enclosure","body":"The Fasil Ghebbi complex spans 70,000 square meters and contains six major castles, three churches, a library, a chancery, and a banquet hall. Fasilides' Castle, the centerpiece, rises four stories with watchtowers at each corner. The design shows clear Portuguese influence — Jesuit missionaries had been active in Ethiopia earlier in the century — but the execution is uniquely Ethiopian. The walls are decorated with Aksumite-style monkey-head beams alternating with projecting stone courses. Next to the castle stands a large stone pool where Timkat (Epiphany) celebrations are still held annually, filled with water blessed by priests."},
+    {"type":"text","title":"The Gondarine Renaissance","body":"Under Fasilides and his successors, Gondar flourished as a center of art, learning, and theology. Manuscript illumination reached new heights — the Gondarine school of painting produced some of Ethiopia's most beautiful religious art. The city's scriptoria copied and illustrated hundreds of manuscripts. Debtera (church scholars) composed new hymns and theological works. Gondar became known as the 'Camelot of Africa' — a royal court where Ethiopian culture reached its full expression. Today, Fasil Ghebbi is a UNESCO World Heritage site and the most visited historical destination in Ethiopia after Lalibela."}
+  ]
+}

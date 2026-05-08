@@ -1,0 +1,16 @@
+{
+  "id": "ch_aksumite_003",
+  "era_id": "aksumite",
+  "title": "Decline and Legacy of Aksum",
+  "subtitle": "The Fall of Africa's Ancient Empire",
+  "year_start": 600, "year_end": 960,
+  "location": "Aksum, Tigray",
+  "is_free": false,
+  "key_figures": ["King Kaleb", "Queen Gudit"],
+  "sections": [
+    {"type":"text","title":"The Persian Wars","body":"In the 6th century, Aksum reached the height of its power under King Kaleb, who launched a military expedition across the Red Sea to Yemen to protect Christians persecuted by the Jewish Himyarite king Dhu Nuwas. Kaleb's forces crossed the sea in a fleet of ships and defeated the Himyarites in 525 CE. But the campaign proved to be Aksum's last great power projection. The occupation of Yemen became a drain on resources, and within 50 years, Persian forces had driven the Aksumites out of Arabia entirely."},
+    {"type":"text","title":"Environmental and Economic Decline","body":"The decline was gradual. Archaeological evidence suggests that deforestation and soil erosion around Aksum reduced agricultural productivity. The port of Adulis, once the empire's gateway to the world, was sacked and gradually silted up. Islamic expansion in the 7th century cut Aksum off from its traditional Red Sea trade partners — but notably, the early Muslims respected Ethiopia. According to Islamic tradition, the Prophet Muhammad told his followers to seek refuge in Aksum because 'a righteous king rules there who does no injustice.' The first hijra sent Muslim refugees to the Christian kingdom of Aksum, where Negus Armah gave them sanctuary."},
+    {"type":"quote","body":"Leave the Abyssinians in peace, so long as they do not take the offensive.","attribution":"— Attributed to the Prophet Muhammad, regarding the Aksumites"},
+    {"type":"text","title":"The Rise of the Zagwe","body":"By the 10th century, Aksum had faded. A mysterious figure named Gudit (or Judith), described in Ethiopian tradition as a Jewish queen or a rebel leader, is said to have destroyed the city and overthrown the Aksumite dynasty around 960 CE. The kingdom's center of power shifted south to the highlands of Lasta, where the Zagwe dynasty — builders of the rock-hewn churches of Lalibela — rose to power. The last Aksumite king, Dil Na'od, was deposed, and the line of Solomon appeared broken until the restoration under Yekuno Amlak in 1270."}
+  ]
+}

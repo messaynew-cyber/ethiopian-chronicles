@@ -8,6 +8,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  google_fonts: ^6.1.0
+  shimmer: ^3.0.0
 
 dev_dependencies:
   flutter_test:
@@ -21,3 +23,14 @@ flutter:
     - assets/battles.json
     - assets/chapters_index.json
     - assets/chapters/ch_aksumite_001.json
+    - assets/chapters/ch_aksumite_002.json
+    - assets/chapters/ch_aksumite_003.json
+    - assets/chapters/ch_zagwe_001.json
+    - assets/chapters/ch_solomonic_001.json
+    - assets/chapters/ch_solomonic_002.json
+    - assets/chapters/ch_gondarine_001.json
+    - assets/chapters/ch_zemene_001.json
+    - assets/chapters/ch_modern_001.json
+    - assets/chapters/ch_modern_002.json
+    - assets/chapters/ch_modern_003.json
+    - assets/chapters/ch_adwa_001.json

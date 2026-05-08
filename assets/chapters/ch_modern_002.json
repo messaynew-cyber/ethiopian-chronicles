@@ -1,0 +1,13 @@
+{
+  "id": "ch_modern_002", "era_id": "modern",
+  "title": "Menelik II and Modernization",
+  "subtitle": "The Architect of Modern Ethiopia",
+  "year_start": 1889, "year_end": 1913,
+  "location": "Addis Ababa, Shewa", "is_free": false,
+  "key_figures": ["Emperor Menelik II", "Empress Taytu Betul"],
+  "sections": [
+    {"type":"text","title":"The Builder Emperor","body":"Menelik II is remembered for Adwa, but his greatest achievement may have been building the modern Ethiopian state. He established Addis Ababa as the permanent capital in 1886, introduced Ethiopia's first modern infrastructure — roads, bridges, telegraph lines, a railway to Djibouti — and created the first ministerial government. He introduced a national currency, established Ethiopia's first bank (the Bank of Abyssinia), and created a modern postal system. The first automobile in Ethiopia arrived during his reign, as did the first printing press, the first hospital, and the first modern school — the Menelik II School, which still operates today."},
+    {"type":"text","title":"The Expansion of the Empire","body":"Menelik's reign saw massive territorial expansion. His forces conquered the southern and western regions, incorporating Oromo, Sidama, Wolayta, Somali, and other peoples into the Ethiopian Empire. This expansion — often brutal — created the borders of modern Ethiopia. Critics call it conquest; supporters call it reunification of lands that had been part of historical Ethiopian kingdoms. The debate continues to shape Ethiopian politics today. What is undeniable is that Menelik created the geographic template for the Ethiopian state that exists in the 21st century."},
+    {"type":"text","title":"Succession and Legacy","body":"Menelik's later years were marked by illness — a series of strokes left him partially paralyzed and unable to govern effectively. Empress Taytu stepped in as de facto ruler, but she was eventually sidelined by the nobility. After Menelik's death in 1913, his grandson Lij Iyasu briefly inherited the throne before being deposed — setting the stage for the rise of Ras Tafari Makonnen, the future Emperor Haile Selassie."}
+  ]
+}

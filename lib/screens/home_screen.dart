@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shimmer/shimmer.dart';
 import '../models/chapter.dart';
 import '../services/content_service.dart';
 import '../theme/app_theme.dart';
@@ -167,45 +168,62 @@ class _ChapterCard extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 12),
       child: GestureDetector(
         onTap: locked ? null : onTap,
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 300),
-          padding: const EdgeInsets.all(18),
-          decoration: AppTheme.glassCard(borderColor: locked ? Colors.white10 : color),
-          child: Row(
-            children: [
-              // Chapter number indicator
-              Container(
-                width: 44, height: 44,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: (locked ? Colors.white10 : color).withOpacity(locked ? 0.05 : 0.1),
-                  border: Border.all(color: (locked ? Colors.white10 : color).withOpacity(locked ? 0.15 : 0.3)),
-                ),
-                child: Center(
-                  child: locked
-                      ? const Icon(Icons.lock, color: AppTheme.textMuted, size: 16)
-                      : Icon(Icons.menu_book, color: color, size: 18),
+        child: locked
+            ? Shimmer.fromColors(
+                baseColor: AppTheme.surface,
+                highlightColor: AppTheme.surfaceLight,
+                child: _cardContent(color, locked),
+              )
+            : Hero(
+                tag: 'chapter_${chapter.id}',
+                child: Material(
+                  type: MaterialType.transparency,
+                  child: _cardContent(color, locked),
                 ),
               ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(chapter.title, style: TextStyle(
-                      color: locked ? AppTheme.textMuted : AppTheme.textPrimary,
-                      fontSize: 16, fontFamily: 'serif', fontWeight: FontWeight.w600,
-                    )),
-                    const SizedBox(height: 4),
-                    Text('${chapter.location} • ${chapter.yearStart} CE',
-                        style: const TextStyle(color: AppTheme.textMuted, fontSize: 11, fontFamily: 'monospace')),
-                  ],
-                ),
-              ),
-              Icon(Icons.chevron_right, color: locked ? AppTheme.textMuted : color, size: 20),
-            ],
+      ),
+    );
+  }
+
+  Widget _cardContent(Color color, bool locked) {
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 400),
+      curve: Curves.easeOutExpo,
+      padding: const EdgeInsets.all(18),
+      decoration: AppTheme.glassCard(borderColor: locked ? Colors.white10 : color),
+      child: Row(
+        children: [
+          AnimatedContainer(
+            duration: const Duration(milliseconds: 300),
+            width: 44, height: 44,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: (locked ? Colors.white10 : color).withOpacity(locked ? 0.05 : 0.1),
+              border: Border.all(color: (locked ? Colors.white10 : color).withOpacity(locked ? 0.15 : 0.3)),
+            ),
+            child: Center(
+              child: locked
+                  ? const Icon(Icons.lock, color: AppTheme.textMuted, size: 16)
+                  : Icon(Icons.menu_book, color: color, size: 18),
+            ),
           ),
-        ),
+          const SizedBox(width: 16),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(chapter.title, style: TextStyle(
+                  color: locked ? AppTheme.textMuted : AppTheme.textPrimary,
+                  fontSize: 16, fontFamily: 'serif', fontWeight: FontWeight.w600,
+                )),
+                const SizedBox(height: 4),
+                Text('${chapter.location} • ${chapter.yearStart} CE',
+                    style: const TextStyle(color: AppTheme.textMuted, fontSize: 11, fontFamily: 'monospace')),
+              ],
+            ),
+          ),
+          Icon(Icons.chevron_right, color: locked ? AppTheme.textMuted : color, size: 20),
+        ],
       ),
     );
   }
