@@ -1,0 +1,51 @@
+{
+  "id": "ch_kush_001",
+  "era_id": "kush",
+  "title": "The Black Pharaohs: Kushite Rule of Egypt",
+  "subtitle": "747–656 BC — When Ethiopia Ruled the Nile",
+  "year_start": -747,
+  "year_end": -656,
+  "location": "Napata, Memphis, Thebes — Nile Valley",
+  "is_free": true,
+  "key_figures": [
+    "Piye (Piankhi)",
+    "Shabaka",
+    "Shebitku",
+    "Taharqa",
+    "Tantamani",
+    "Kashta"
+  ],
+  "sections": [
+    {
+      "type": "text",
+      "title": "Herodotus and the Eighteen Ethiopian Kings",
+      "body": "In the 5th century BC, the Greek historian Herodotus traveled to Egypt and recorded a remarkable account from the priests of Ptah at Memphis. They showed him a papyrus roll containing the names of 330 Egyptian kings — and told him that eighteen of these rulers were not native Egyptians but 'Ethiopians.' This claim, recorded in Book II of his Histories, has been a cornerstone for arguments positing foundational Ethiopian influence on Egyptian civilization.\n\nHowever, modern scholarship reveals a more complex picture. The 'Ethiopia' Herodotus referred to was not modern-day Ethiopia (Abyssinia) but the Kingdom of Kush — known to the Greeks as 'Aethiopia,' literally meaning 'land of the burnt-faced people.' This kingdom, centered in Nubia (present-day Sudan), was the true power that conquered and ruled Egypt. And while Herodotus spoke of eighteen kings, the historical record identifies five major Kushite pharaohs who formed the 25th Dynasty."
+    },
+    {
+      "type": "quote",
+      "body": "After this man the priests enumerated to me from a papyrus roll the names of other kings, three hundred and thirty in number; and in all these generations of men eighteen were Ethiopians, one was a woman, a native Egyptian, and the rest were men and of Egyptian race.",
+      "attribution": "Herodotus, Histories, Book II, Chapter 100"
+    },
+    {
+      "type": "text",
+      "title": "The Rise of Kushite Power",
+      "body": "The ascent of Kush from Egyptian colony to ruler of Egypt was a gradual process rooted in centuries of cultural assimilation. For nearly 500 years during Egypt's New Kingdom, the pharaohs colonized and controlled Nubia, exploiting its gold mines and imposing Egyptian culture, religion, and administrative systems on the local elite. When Egypt's power collapsed around 1070 BC, Kush emerged as an independent kingdom — but one that was thoroughly Egyptianized.\n\nThe Kushite elite adopted Egyptian language, writing, religious beliefs, and artistic styles. They worshipped Amun as their supreme deity and built a magnificent temple to him at Jebel Barkal in Napata, which they believed was the god's southern dwelling place. When Egypt descended into political fragmentation during the Third Intermediate Period, the Kushite kings saw an opportunity — and a divine mandate."
+    },
+    {
+      "type": "text",
+      "title": "Piye's Holy Conquest",
+      "body": "Around 727 BC, Piye (also known as Piankhi), the king of Kush, launched a military campaign to subdue the fragmented, Libyan-ruled territories of Egypt. His motivation was not mere conquest — it was religious restoration. Piye presented himself as the champion of Amun, come to restore the god's proper worship and purify religious practices that had been corrupted.\n\nPiye's victory is recorded on his famous 'Victory Stela' found at Napata, which portrays his conquest as a holy mission rather than a foreign invasion. After securing Egypt, Piye returned to Napata, ruling from the south and establishing the foundation for what would become the 25th Dynasty. His inscription is one of the most detailed royal texts from ancient Africa."
+    },
+    {
+      "type": "text",
+      "title": "Shabaka the Consolidator",
+      "body": "Piye's successor, Shabaka, solidified Kushite rule by moving the capital to Memphis — the ancient capital of a unified Egypt. This was a decisive political act that cemented his legitimacy as a true pharaoh of both Upper and Lower Egypt. Shabaka is renowned for commissioning the 'Shabaka Stone,' which preserves the 'Memphite Theology' — an ancient Egyptian creation myth that is one of the most important surviving religious texts from antiquity.\n\nShabaka's reign marked a period of stability and cultural revival. He integrated the two kingdoms of Egypt and Kush into a single empire, promoting a renaissance of traditional Egyptian religion, art, and architecture. Under his rule, the Kushite pharaohs were not foreign occupiers but restorers of Egypt's ancient glory."
+    },
+    {
+      "type": "text",
+      "title": "Taharqa: The Golden Age",
+      "body": "The most powerful and famous of the Kushite pharaohs was Taharqa, whose reign (690–664 BC) marked the golden age of the 25th Dynasty. He initiated a massive building campaign throughout Egypt and Kush, constructing and restoring monuments at Karnak, Thebes, and Nuri — where he built the largest pyramid in Nubia. Taharqa challenged the mighty Assyrian Empire for control of the Levant, confronting both Sennacherib and Esarhaddon.\n\nRemarkably, Taharqa appears in the Hebrew Bible as 'Tirhakah, king of Cush,' described as an ally of King Hezekiah of Judah against the Assyrian king Sennacherib. This independent biblical confirmation of a Kushite king intervening in Near Eastern politics underscores the international reach of the 25th Dynasty.\n\nTaharqa's pyramid at Nuri, his magnificent colonnade at Karnak, and his reputation as a builder and warrior make him one of the most celebrated figures in African antiquity."
+    }
+  ],
+  "sections_am": []
+}

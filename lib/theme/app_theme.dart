@@ -72,11 +72,14 @@ class AppTheme {
 
   static Color eraColor(String eraId) {
     switch (eraId) {
+      case 'origins': return const Color(0xFFB8860B);
+      case 'kush': return const Color(0xFFCD853F);
+      case 'preaksumite': return const Color(0xFFB8956E);
       case 'aksumite': return eraGold;
       case 'zagwe': return const Color(0xFF9B8EC8);
       case 'solomonic': return eraCrimson;
       case 'gondarine': return eraAmber;
-      case 'zemene': return const Color(0xFFB8956E);
+      case 'zemene': return const Color(0xFF8B7355);
       case 'modern': return eraGreen;
       case 'adwa': return eraRed;
       default: return accent;
@@ -85,6 +88,9 @@ class AppTheme {
 
   static IconData eraIcon(String eraId) {
     switch (eraId) {
+      case 'origins': return Icons.stars;
+      case 'kush': return Icons.shield;
+      case 'preaksumite': return Icons.temple_hindu;
       case 'aksumite': return Icons.account_balance;
       case 'zagwe': return Icons.church_outlined;
       case 'solomonic': return Icons.local_fire_department;
@@ -98,6 +104,9 @@ class AppTheme {
 
   static String eraAmharic(String eraId) {
     switch (eraId) {
+      case 'origins': return 'ትውፊታዊ አመጣጥ';
+      case 'kush': return 'የኩሽ ሥርወ መንግሥት';
+      case 'preaksumite': return 'ቅድመ-አክሱም';
       case 'aksumite': return 'አክሱም';
       case 'zagwe': return 'ዛግዌ';
       case 'solomonic': return 'ሰለሞናዊ';

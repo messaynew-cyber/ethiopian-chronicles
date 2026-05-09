@@ -1,0 +1,42 @@
+{
+  "id": "ch_preaksumite_002",
+  "era_id": "preaksumite",
+  "title": "Yeha: The Great Temple and Ethiopia's First Civilization",
+  "subtitle": "8th–5th Century BC — Architectural Marvel of the Ancient World",
+  "year_start": -800,
+  "year_end": -100,
+  "location": "Yeha, Tigray Region, Northern Ethiopia",
+  "is_free": true,
+  "key_figures": [
+    "Sabaean Builders",
+    "Priests of Almaqah"
+  ],
+  "sections": [
+    {
+      "type": "text",
+      "title": "The City of Yeha",
+      "body": "The city of Yeha, located in the Tigray region of northern Ethiopia, stands as the most impressive physical remnant of the Pre-Aksumite civilization. As the capital and religious center of the Kingdom of D'mt, Yeha was a major political and commercial hub, strategically positioned at the crossroads of trade routes connecting the African interior with the Red Sea coast.\n\nArchaeological evidence suggests that Yeha was a prosperous and sophisticated urban center. The remains of a large market area, storage facilities, and residential quarters indicate a thriving economy based on the trade of valuable commodities — ivory, gold, incense, and exotic animal products — that were highly prized in the markets of Egypt, Arabia, and the Mediterranean world. Yeha was, in many ways, the prototype for the commercial empire that Aksum would later become."
+    },
+    {
+      "type": "text",
+      "title": "The Great Temple of Yeha",
+      "body": "The crown jewel of the Yeha civilization is the Great Temple — a magnificent structure that has stood for over 2,500 years and remains the oldest standing structure in Ethiopia. Dedicated to the Sabaean deity Almaqah, the temple is a masterpiece of ancient engineering that showcases the advanced architectural skills of its builders.\n\nConstructed from massive, finely dressed blocks of limestone fitted together with extraordinary precision — without the use of mortar — the temple exemplifies the Sabaean architectural tradition at its finest. Its walls, some reaching heights of over 12 meters, are composed of blocks so precisely cut that a knife blade cannot be inserted between them. The temple's design follows a rectangular plan with a monumental entrance aligned to the rising sun, suggesting its use in solar worship ceremonies.\n\nThe temple's survival through two and a half millennia of earthquakes, wars, and changing civilizations is itself a testament to the skill of its builders. It remains a place of active worship to this day, serving as a church — a living link between Ethiopia's pre-Christian past and its Christian present."
+    },
+    {
+      "type": "text",
+      "title": "The Himyaritic Inscriptions",
+      "body": "The Great Temple of Yeha is adorned with inscriptions in the Himyaritic (South Arabian) script, providing invaluable insights into the language, religion, and political organization of the Pre-Aksumite civilization. These inscriptions mention the names of Sabaean deities — particularly Almaqah — and refer to kings who commissioned the construction of temples and public works.\n\nThe inscriptions represent the earliest written records yet discovered in Ethiopia, marking the beginning of Ethiopian literacy. The South Arabian script used in these inscriptions would gradually evolve into the distinctive Ge'ez script — a transformation that mirrors the broader cultural evolution of Ethiopian civilization from Sabaean-influenced colony to independent, creative power."
+    },
+    {
+      "type": "text",
+      "title": "From Yeha to Aksum: The Transition",
+      "body": "The decline of Yeha and the Kingdom of D'mt around the 5th century BC was not a catastrophic collapse but a gradual transformation. The knowledge, techniques, and cultural traditions developed at Yeha were absorbed and adapted by succeeding polities in the region. When the city of Aksum began its rise to prominence in the 1st century AD, it did so on foundations laid centuries earlier at Yeha.\n\nThe continuity between Yeha and Aksum is visible in multiple domains: the squared stone masonry, the use of South Arabian-derived script, the religious traditions centered on celestial deities, and the strategic exploitation of Red Sea trade networks. The Pre-Aksumite period was, in this sense, a laboratory of civilization — a time of experimentation and synthesis that produced the distinctive Ethiopian civilization that would astonish the ancient world.\n\nYeha's Great Temple still stands in the Ethiopian highlands, a silent witness to the dawn of Ethiopian civilization — older than Rome, contemporary with the earliest Greek temples, and a testament to the sophistication of Africa's ancient peoples."
+    },
+    {
+      "type": "quote",
+      "body": "The temple of Yeha is not just an architectural marvel; it is a sacred site that has been a place of worship for over 2,500 years — a living link between Ethiopia's pre-Christian past and its Christian present.",
+      "attribution": "Ethiopia's Ancient Past, 2026"
+    }
+  ],
+  "sections_am": []
+}

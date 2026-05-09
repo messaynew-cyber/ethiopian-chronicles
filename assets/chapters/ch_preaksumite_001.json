@@ -1,0 +1,37 @@
+{
+  "id": "ch_preaksumite_001",
+  "era_id": "preaksumite",
+  "title": "The Kingdom of D'mt: Ethiopia's First State",
+  "subtitle": "10th–5th Century BC — The Dawn of Ethiopian Civilization",
+  "year_start": -1000,
+  "year_end": -500,
+  "location": "Northern Ethiopian Highlands & Eritrea",
+  "is_free": true,
+  "key_figures": [
+    "Sabaean Settlers",
+    "Kings of D'mt"
+  ],
+  "sections": [
+    {
+      "type": "text",
+      "title": "From Legend to History",
+      "body": "The Pre-Aksumite era marks the transition from the legendary narratives of Nimrod and the God-Kings to the emergence of Ethiopia's first historically attested civilization. This period, spanning roughly from the 1st millennium BC to the 1st century AD, witnessed the development of complex societies, the establishment of powerful kingdoms, and the increasing influence of external cultures — particularly from the Arabian Peninsula.\n\nThe Kingdom of D'mt (or Da'amat), which emerged in the northern Ethiopian highlands around the 10th century BC and flourished until the 5th century BC, represents Ethiopia's first known state. Centered at the site of Yeha, this polity bridged the gap between myth and history, leaving behind inscriptions, monuments, and material culture that allow us to reconstruct its story."
+    },
+    {
+      "type": "text",
+      "title": "The Sabaean Connection",
+      "body": "One of the most striking features of the Pre-Aksumite period is the profound influence of the Sabaean kingdom of South Arabia (modern-day Yemen) on the emerging Ethiopian civilization. Sabaeans — a Semitic-speaking people who established a powerful kingdom on the opposite shore of the Red Sea — crossed the narrow strait and settled in the Eritrean and Ethiopian highlands as early as the first millennium BC.\n\nThese migrants brought with them their language, their South Arabian script, their architectural techniques, and their religious beliefs — all of which had a transformative impact on the local cultures. The inscriptions found at Yeha and other Pre-Aksumite sites are written in a script nearly identical to Sabaean, and they invoke Sabaean deities, particularly Almaqah, the moon god who was the national deity of the Sabaean kingdom.\n\nSome scholars have argued that D'mt was essentially a Sabaean colony or a state dominated by Sabaean elites. Others, however, view the relationship as a more complex partnership between equals, based on trade and mutual cultural exchange rather than colonial domination."
+    },
+    {
+      "type": "text",
+      "title": "The Biblical Connection: D'mt and Dedan",
+      "body": "An intriguing scholarly debate surrounds the possible connection between the Kingdom of D'mt and the biblical name 'Dedan.' In the Book of Genesis, Dedan appears as a son of Cush and grandson of Ham — placing him within the same genealogical framework as Nimrod. If the Kingdom of D'mt is indeed related to the biblical Dedan, this would provide a direct link between Ethiopia's first historical state and the legendary genealogy preserved in Ethiopian tradition.\n\nHowever, the evidence for this connection remains circumstantial. The name 'Dedan' is also associated with a region in northwestern Arabia, and many scholars believe the biblical references point there rather than to the Horn of Africa. Despite the lack of definitive proof, the possibility of a D'mt-Dedan connection illustrates the deep intertwining of Ethiopian history with the biblical narratives that have shaped the nation's self-understanding."
+    },
+    {
+      "type": "text",
+      "title": "The Legacy of D'mt",
+      "body": "Though the Kingdom of D'mt eventually declined around the 5th century BC — possibly due to the disruption of Red Sea trade routes — its legacy proved enduring. The Sabaean script used by D'mt's scribes evolved into the Ge'ez script, which remains the liturgical language of the Ethiopian Orthodox Church to this day. The architectural techniques developed during this period, particularly the precise dry-stone masonry seen at Yeha, would influence Ethiopian building traditions for centuries.\n\nMost importantly, the Kingdom of D'mt established the political and cultural foundations upon which the Aksumite Empire would later build. The concept of a unified highland kingdom, the integration of Arabian and African cultural elements, and the establishment of Red Sea trade connections all originated in this formative period. D'mt was, in essence, the blueprint for the greatness that would follow."
+    }
+  ],
+  "sections_am": []
+}

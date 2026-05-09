@@ -1,134 +1,116 @@
 [
   {
+    "id": "ch_origins_001",
+    "era_id": "origins",
+    "title": "Before the Flood: The First Kings of Africa",
+    "is_free": true
+  },
+  {
+    "id": "ch_origins_002",
+    "era_id": "origins",
+    "title": "Nimrod: The Mighty Hunter Who Founded Ethiopia",
+    "is_free": true
+  },
+  {
+    "id": "ch_origins_003",
+    "era_id": "origins",
+    "title": "The God-Kings and the Dynasty of Menelik",
+    "is_free": false
+  },
+  {
+    "id": "ch_kush_001",
+    "era_id": "kush",
+    "title": "The Black Pharaohs: Kushite Rule of Egypt",
+    "is_free": true
+  },
+  {
+    "id": "ch_kush_002",
+    "era_id": "kush",
+    "title": "Twilight of the Black Pharaohs",
+    "is_free": true
+  },
+  {
+    "id": "ch_preaksumite_001",
+    "era_id": "preaksumite",
+    "title": "The Kingdom of D'mt: Ethiopia's First State",
+    "is_free": true
+  },
+  {
+    "id": "ch_preaksumite_002",
+    "era_id": "preaksumite",
+    "title": "Yeha: The Great Temple and Ethiopia's First Civilization",
+    "is_free": true
+  },
+  {
+    "id": "ch_aksumite_001",
+    "era_id": "aksumite",
+    "title": "The Rise of Aksum",
+    "is_free": true
+  },
+  {
     "id": "ch_aksumite_002",
     "era_id": "aksumite",
-    "title": "Ezana: The Emperor Who Found God",
-    "subtitle": "Christianity Comes to Africa",
-    "year_start": 320,
-    "year_end": 360,
-    "location": "Aksum, Tigray",
-    "is_free": false,
-    "key_figures": ["King Ezana", "Frumentius (Abba Salama)"],
-    "sections": []
+    "title": "Aksumite Trade and Coinage",
+    "is_free": true
   },
   {
     "id": "ch_aksumite_003",
     "era_id": "aksumite",
-    "title": "Decline and Legacy of Aksum",
-    "subtitle": "The Fall of Africa's Ancient Empire",
-    "year_start": 600,
-    "year_end": 960,
-    "location": "Aksum, Tigray",
-    "is_free": false,
-    "key_figures": ["King Kaleb", "Queen Gudit"],
-    "sections": []
+    "title": "Ezana and Christianity",
+    "is_free": false
   },
   {
     "id": "ch_zagwe_001",
     "era_id": "zagwe",
-    "title": "Lalibela: The New Jerusalem",
-    "subtitle": "Churches Carved from Living Rock",
-    "year_start": 1180,
-    "year_end": 1220,
-    "location": "Lalibela, Wollo",
-    "is_free": false,
-    "key_figures": ["King Lalibela"],
-    "sections": []
+    "title": "The Rock-Hewn Churches of Lalibela",
+    "is_free": true
   },
   {
     "id": "ch_solomonic_001",
     "era_id": "solomonic",
-    "title": "The Restoration of Solomon's Line",
-    "subtitle": "Yekuno Amlak and the Return of the Kings",
-    "year_start": 1270,
-    "year_end": 1314,
-    "location": "Tegulet, Shewa",
-    "is_free": false,
-    "key_figures": ["Yekuno Amlak"],
-    "sections": []
+    "title": "The Restored Throne of Solomon",
+    "is_free": true
   },
   {
     "id": "ch_solomonic_002",
     "era_id": "solomonic",
-    "title": "Emperor Zara Yaqob",
-    "subtitle": "The Philosopher King",
-    "year_start": 1434,
-    "year_end": 1468,
-    "location": "Debre Birhan, Shewa",
-    "is_free": false,
-    "key_figures": ["Zara Yaqob"],
-    "sections": []
+    "title": "Church, State, and Empire",
+    "is_free": false
   },
   {
     "id": "ch_gondarine_001",
     "era_id": "gondarine",
-    "title": "Fasil Ghebbi: Camelot of Africa",
-    "subtitle": "Emperor Fasilides and the Gondar Renaissance",
-    "year_start": 1636,
-    "year_end": 1667,
-    "location": "Gondar, Amhara",
-    "is_free": false,
-    "key_figures": ["Emperor Fasilides"],
-    "sections": []
+    "title": "The Walled City of Gondar",
+    "is_free": true
   },
   {
     "id": "ch_zemene_001",
     "era_id": "zemene",
-    "title": "The Era of Princes",
-    "subtitle": "A Century of Warlords and Chaos",
-    "year_start": 1769,
-    "year_end": 1855,
-    "location": "Throughout Ethiopia",
-    "is_free": false,
-    "key_figures": ["Ras Mikael Sehul", "Ras Gugsa"],
-    "sections": []
+    "title": "The Era of the Princes",
+    "is_free": true
   },
   {
     "id": "ch_modern_001",
     "era_id": "modern",
-    "title": "Tewodros II: The Unifier",
-    "subtitle": "A Mad King or a Visionary?",
-    "year_start": 1855,
-    "year_end": 1868,
-    "location": "Magdala, Amhara",
-    "is_free": false,
-    "key_figures": ["Emperor Tewodros II"],
-    "sections": []
+    "title": "Reunification Under Tewodros II",
+    "is_free": true
   },
   {
     "id": "ch_modern_002",
     "era_id": "modern",
-    "title": "Menelik II and the Battle of Adwa",
-    "subtitle": "Africa's Victory Against Colonialism",
-    "year_start": 1889,
-    "year_end": 1896,
-    "location": "Adwa, Tigray",
-    "is_free": false,
-    "key_figures": ["Emperor Menelik II", "Empress Taytu Betul"],
-    "sections": []
+    "title": "Yohannes IV and Menelik II",
+    "is_free": true
   },
   {
     "id": "ch_modern_003",
     "era_id": "modern",
-    "title": "Haile Selassie and the Modern World",
-    "subtitle": "The Lion of Judah on the World Stage",
-    "year_start": 1930,
-    "year_end": 1974,
-    "location": "Addis Ababa, Shewa",
-    "is_free": false,
-    "key_figures": ["Emperor Haile Selassie I"],
-    "sections": []
+    "title": "Haile Selassie and Modern Ethiopia",
+    "is_free": false
   },
   {
     "id": "ch_adwa_001",
     "era_id": "adwa",
-    "title": "The Battle of Adwa: Full Account",
-    "subtitle": "How Ethiopia Defeated a European Empire",
-    "year_start": 1895,
-    "year_end": 1896,
-    "location": "Adwa, Tigray",
-    "is_free": false,
-    "key_figures": ["Menelik II", "Taytu Betul", "Ras Makonnen", "General Oreste Baratieri"],
-    "sections": []
+    "title": "The Battle of Adwa",
+    "is_free": true
   }
 ]

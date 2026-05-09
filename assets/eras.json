@@ -1,5 +1,45 @@
 [
   {
+    "id": "origins",
+    "name": "Legendary Origins",
+    "amharic_name": "ትውፊታዊ አመጣጥ",
+    "start_year": -4470,
+    "end_year": -1000,
+    "description": "From the Pre-Flood Kings of Africa to Nimrod's journey from Babel to Ethiopia. The Tribe of Ori and Aram, the 1922 Ethiopian Regnal List, and the founding of the Ethiopian nation by descendants of Noah.",
+    "color": "0xffB8860B",
+    "chapter_ids": [
+      "ch_origins_001",
+      "ch_origins_002",
+      "ch_origins_003"
+    ]
+  },
+  {
+    "id": "kush",
+    "name": "Kings of Kush & Egypt",
+    "amharic_name": "የኩሽ እና የግብፅ ነገሥታት",
+    "start_year": -747,
+    "end_year": -656,
+    "description": "The 25th Dynasty — when Kushite (Ethiopian) Pharaohs ruled Egypt. Piye, Shabaka, Shebitku, Taharqa, and Tantamani restored Egyptian traditions and built a dual empire spanning the Nile Valley.",
+    "color": "0xff8B4513",
+    "chapter_ids": [
+      "ch_kush_001",
+      "ch_kush_002"
+    ]
+  },
+  {
+    "id": "preaksumite",
+    "name": "Pre-Aksumite Era",
+    "amharic_name": "ቅድመ-አክሱም",
+    "start_year": -1000,
+    "end_year": 100,
+    "description": "The Kingdom of D'mt and the Yeha civilization — Ethiopia's first historically attested state. Sabaean influence from South Arabia, the Great Temple of Yeha, and the foundations of Aksumite greatness.",
+    "color": "0xffCD853F",
+    "chapter_ids": [
+      "ch_preaksumite_001",
+      "ch_preaksumite_002"
+    ]
+  },
+  {
     "id": "aksumite",
     "name": "Aksumite Empire",
     "amharic_name": "አክሱም",
@@ -7,7 +47,11 @@
     "end_year": 960,
     "description": "One of the great powers of the ancient world, rivaling Rome, Persia, and China. The Aksumite Empire dominated the Red Sea trade routes and was the first African kingdom to mint its own coins and adopt Christianity as a state religion.",
     "color": "0xffd4a843",
-    "chapter_ids": ["ch_aksumite_001", "ch_aksumite_002", "ch_aksumite_003"]
+    "chapter_ids": [
+      "ch_aksumite_001",
+      "ch_aksumite_002",
+      "ch_aksumite_003"
+    ]
   },
   {
     "id": "zagwe",
@@ -17,7 +61,9 @@
     "end_year": 1270,
     "description": "The Zagwe dynasty ruled from Lalibela, where they carved eleven monolithic churches out of solid rock — one of the architectural wonders of the medieval world.",
     "color": "0xff7b68ee",
-    "chapter_ids": ["ch_zagwe_001"]
+    "chapter_ids": [
+      "ch_zagwe_001"
+    ]
   },
   {
     "id": "solomonic",
@@ -27,7 +73,10 @@
     "end_year": 1769,
     "description": "Claiming descent from King Solomon and the Queen of Sheba, the Solomonic dynasty ruled Ethiopia for over 500 years, producing emperors, saints, and legends.",
     "color": "0xffc41e3a",
-    "chapter_ids": ["ch_solomonic_001", "ch_solomonic_002"]
+    "chapter_ids": [
+      "ch_solomonic_001",
+      "ch_solomonic_002"
+    ]
   },
   {
     "id": "gondarine",
@@ -37,7 +86,9 @@
     "end_year": 1769,
     "description": "Emperor Fasilides established Gondar as Ethiopia's permanent capital — a city of palaces, libraries, and churches that earned it the name 'the Camelot of Africa.'",
     "color": "0xffe8a838",
-    "chapter_ids": ["ch_gondarine_001"]
+    "chapter_ids": [
+      "ch_gondarine_001"
+    ]
   },
   {
     "id": "zemene",
@@ -47,7 +98,9 @@
     "end_year": 1855,
     "description": "The 'Era of Princes' — a century of civil war and regional warlords that nearly tore Ethiopia apart, ending with the rise of Emperor Tewodros II.",
     "color": "0xff8b6914",
-    "chapter_ids": ["ch_zemene_001"]
+    "chapter_ids": [
+      "ch_zemene_001"
+    ]
   },
   {
     "id": "modern",
@@ -57,7 +110,11 @@
     "end_year": 2026,
     "description": "From the unification under Tewodros to the Battle of Adwa, the reign of Haile Selassie, the Derg, and the Federal Republic — Ethiopia's modern history is a story of resilience and transformation.",
     "color": "0xff2e7d32",
-    "chapter_ids": ["ch_modern_001", "ch_modern_002", "ch_modern_003"]
+    "chapter_ids": [
+      "ch_modern_001",
+      "ch_modern_002",
+      "ch_modern_003"
+    ]
   },
   {
     "id": "adwa",
@@ -67,6 +124,8 @@
     "end_year": 1896,
     "description": "On March 1, 1896, Ethiopian forces under Emperor Menelik II decisively defeated the Italian army at Adwa — the first time an African nation defeated a European colonial power in a major battle.",
     "color": "0xff8b0000",
-    "chapter_ids": ["ch_adwa_001"]
+    "chapter_ids": [
+      "ch_adwa_001"
+    ]
   }
 ]

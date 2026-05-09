@@ -1,0 +1,46 @@
+{
+  "id": "ch_origins_001",
+  "era_id": "origins",
+  "title": "Before the Flood: The First Kings of Africa",
+  "subtitle": "8544–6282 BC — The Antediluvian World",
+  "year_start": -8544,
+  "year_end": -6282,
+  "location": "Ancient Ethiopia & Mesopotamia",
+  "is_free": true,
+  "key_figures": [
+    "Aram",
+    "Gariak I",
+    "Gankam",
+    "Borsa (Queen)",
+    "Soleyman Tchaghi",
+    "Noah"
+  ],
+  "sections": [
+    {
+      "type": "text",
+      "title": "The 1922 Ethiopian Regnal List",
+      "body": "In 1922, at the behest of Ras Tafari Makonnen — the future Emperor Haile Selassie I — Ethiopian scholars compiled one of the most remarkable documents in African historiography: the Ethiopian Regnal List. This chronicle traces Ethiopia's monarchy back to the very dawn of human civilization, beginning with a dynasty of 'Pre-Flood Kings of Africa' who are said to have ruled from 8544 to 6282 BC — a period spanning over two millennia before the biblical deluge.\n\nThe Regnal List is not merely a collection of names. It represents a sophisticated historiographical tradition that connects Ethiopian civilization directly to the biblical patriarchs and the earliest chapters of human history. While modern archaeology cannot verify these dates, the list provides invaluable insight into how Ethiopians have understood their own antiquity — as a continuous, unbroken chain of sovereignty stretching back to Creation itself."
+    },
+    {
+      "type": "text",
+      "title": "The Pre-Diluvian Sovereigns",
+      "body": "The Pre-Flood Kings of Africa, as recorded in the 1922 Regnal List, form a dynasty of rulers whose names resonate with ancient, primordial power. The list begins with Aram, who reigned for 60 years, followed by Gariak I (66 years), Gankam (83 years), and Queen Borsa — the first female ruler mentioned in Ethiopian annals — who governed for 67 years. Successive rulers included Gariak II, Djan I, Djan II, Senefrou, Zeenabzamin, Sahlan, Elaryan, and Nimroud (Nimrod), before culminating with Soleyman Tchaghi.\n\nThese rulers governed in a world fundamentally different from our own — a pristine antediluvian environment that Ethiopian tradition describes as idyllic. The Regnal List presents this era as one of great longevity, wisdom, and divine favor, setting the stage for the post-Flood renewal that would come through Noah and his descendants."
+    },
+    {
+      "type": "quote",
+      "body": "And all the days of Methuselah were nine hundred sixty and nine years: and he died.",
+      "attribution": "Genesis 5:27"
+    },
+    {
+      "type": "text",
+      "title": "The Antediluvian Worldview",
+      "body": "Ethiopian tradition holds that the pre-Flood world was characterized by extended human lifespans — the biblical patriarchs lived for centuries, with Methuselah reaching 969 years. This longevity, combined with ideal environmental conditions, allowed for rapid population growth and the development of sophisticated civilizations whose achievements were lost in the cataclysm.\n\nThe 1922 Regnal List's inclusion of pre-Flood kings serves a crucial cultural function: it establishes Ethiopia's claim to be among the most ancient of nations, predating even the Great Flood itself. This narrative positions Ethiopia not as a newcomer to civilization but as a repository of antediluvian wisdom that survived through Noah's righteous lineage."
+    },
+    {
+      "type": "text",
+      "title": "Noah and the Great Renewal",
+      "body": "The biblical Flood — calculated by the Masoretic Text to approximately 1,656 years after Creation — represents both an end and a beginning in Ethiopian chronology. The cataclysm that destroyed the corrupt pre-Flood world also preserved humanity's righteous remnant through Noah and his family. Ethiopian tradition identifies Noah as a crucial link in the chain of sovereignty, connecting the antediluvian kings to the post-Flood dynasties through his sons Shem, Ham, and Japheth.\n\nHam's son Cush, whose name is synonymous with Ethiopia itself, becomes the pivotal figure through whom the royal lineage passes. From Cush would come Nimrod — the mighty hunter, the builder of kingdoms, and the legendary founder of Ethiopian civilization."
+    }
+  ],
+  "sections_am": []
+}

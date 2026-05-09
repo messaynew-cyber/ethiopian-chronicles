@@ -23,6 +23,13 @@ flutter:
     - assets/eras.json
     - assets/battles.json
     - assets/chapters_index.json
+    - assets/chapters/ch_origins_001.json
+    - assets/chapters/ch_origins_002.json
+    - assets/chapters/ch_origins_003.json
+    - assets/chapters/ch_kush_001.json
+    - assets/chapters/ch_kush_002.json
+    - assets/chapters/ch_preaksumite_001.json
+    - assets/chapters/ch_preaksumite_002.json
     - assets/chapters/ch_aksumite_001.json
     - assets/chapters/ch_aksumite_002.json
     - assets/chapters/ch_aksumite_003.json
