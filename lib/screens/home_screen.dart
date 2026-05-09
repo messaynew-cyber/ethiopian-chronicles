@@ -29,16 +29,24 @@ class _HomeScreenState extends State<HomeScreen> {
         chapter: chapter, content: widget.content, appState: widget.appState,
       ),
       transitionsBuilder: (_, animation, __, child) {
-        return FadeTransition(
-          opacity: CurvedAnimation(parent: animation, curve: Curves.easeOut),
-          child: SlideTransition(
-            position: Tween<Offset>(begin: const Offset(0, 0.08), end: Offset.zero)
-                .animate(CurvedAnimation(parent: animation, curve: Curves.easeOutExpo)),
-            child: child,
+        final curved = CurvedAnimation(parent: animation, curve: Curves.easeOutExpo);
+        return AnimatedBuilder(
+          animation: curved,
+          builder: (_, w) => Transform(
+            transform: Matrix4.identity()
+              ..setEntry(3, 2, 0.001)
+              ..translate(0.0, 0.0, (1 - curved.value) * -200)
+              ..scale(curved.value.clamp(0.7, 1.0)),
+            alignment: Alignment.center,
+            child: Opacity(
+              opacity: curved.value.clamp(0.0, 1.0),
+              child: w,
+            ),
           ),
+          child: child,
         );
       },
-      transitionDuration: const Duration(milliseconds: 500),
+      transitionDuration: const Duration(milliseconds: 650),
     ));
   }
 
