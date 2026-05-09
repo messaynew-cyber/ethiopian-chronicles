@@ -50,10 +50,6 @@ class _ChapterScreenState extends State<ChapterScreen> with TickerProviderStateM
     final max = _scrollController.position.maxScrollExtent;
     if (max > 0) setState(() => _progress = (_scrollController.offset / max).clamp(0.0, 1.0));
   }
-void _onScroll() {
-    final max = _scrollController.position.maxScrollExtent;
-    if (max > 0) setState(() => _progress = (_scrollController.offset / max).clamp(0.0, 1.0));
-  }
 
   Future<void> _toggleNarration() async {
     HapticFeedback.lightImpact();
@@ -214,8 +210,8 @@ void _onScroll() {
                         parent: _sectionAnimCtrl,
                         curve: Interval(delay.clamp(0.0, 1.0), (delay + 0.4).clamp(0.0, 1.0), curve: Curves.easeOutExpo),
                       );
-                      return SectionAnimator( 
-                        listenable: anim,
+                      return AnimatedBuilder(
+                        animation: anim,
                         builder: (_, child) => FadeTransition(
                           opacity: anim,
                           child: SlideTransition(
@@ -368,23 +364,5 @@ void _onScroll() {
           ),
         );
     }
-  }
-}
-class _PulseAnimationState extends State<_PulseAnimation> with SingleTickerProviderStateMixin {
-  late AnimationController _ctrl;
-
-  @override
-  void initState() {
-    super.initState();
-    _ctrl = AnimationController(vsync: this, duration: const Duration(milliseconds: 1500));
-    _ctrl.repeat(reverse: true);
-  }
-@override
-  Widget build(BuildContext context) {
-    return SectionAnimator( 
-      listenable: _ctrl,
-      builder: (_, child) => Transform.scale(scale: 1.0 + _ctrl.value * 0.08, child: child),
-      child: widget.child,
-    );
   }
 }
