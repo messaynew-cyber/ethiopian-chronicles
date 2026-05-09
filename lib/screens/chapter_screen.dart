@@ -222,7 +222,9 @@ class _ChapterScreenState extends State<ChapterScreen> with TickerProviderStateM
                         child: _buildSection(sections[index], eraColor),
                       );
                     },
-                    childCount: sections.length,
+                    childCount: (a.amharicMode && chapter.sectionsAm != null && chapter.sectionsAm!.isNotEmpty)
+                        ? chapter.sectionsAm!.length
+                        : chapter.sections.length,
                   ),
                 ),
               ),
