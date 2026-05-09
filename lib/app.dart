@@ -84,7 +84,7 @@ class _LoadingScreen extends StatelessWidget {
               builder: (_, __) {
                 final t = glowAnim.value;
                 final py = (y + t * speed) % 1.0;
-                final opacity = (0.05 + 0.1 * (0.5 + 0.5 * (3.14159 * (t * 3 + i * 0.7)).isNaN ? 0 : 0));
+                final opacity = 0.05 + glowAnim.value * 0.08;
                 return Positioned(
                   left: x * MediaQuery.of(context).size.width,
                   top: py * MediaQuery.of(context).size.height,
