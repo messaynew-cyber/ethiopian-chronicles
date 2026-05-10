@@ -131,17 +131,17 @@ class _HomeScreenState extends State<HomeScreen> {
                           padding: const EdgeInsets.fromLTRB(20, 8, 20, 20),
                           itemCount: chapters.length,
                           itemBuilder: (context, index) {
-                            // V2: Staggered entrance animation
+                            // V2: Premium staggered entrance — dramatic slide + scale
                             return TweenAnimationBuilder<double>(
                               tween: Tween(begin: 0.0, end: 1.0),
-                              duration: Duration(milliseconds: 500 + index * 60),
+                              duration: Duration(milliseconds: 600 + index * 80),
                               curve: Curves.easeOutCubic,
                               builder: (context, value, child) => Opacity(
                                 opacity: value,
                                 child: Transform.translate(
-                                  offset: Offset(0, 30 * (1 - value)),
+                                  offset: Offset(0, 40 * (1 - value)),
                                   child: Transform.scale(
-                                    scale: 0.92 + 0.08 * value,
+                                    scale: 0.85 + 0.15 * value,
                                     child: child,
                                   ),
                                 ),
@@ -242,15 +242,20 @@ class _ChapterCardState extends State<_ChapterCard> with SingleTickerProviderSta
                   duration: const Duration(milliseconds: 300),
                   curve: Curves.easeOutExpo,
                   padding: const EdgeInsets.all(18),
-                  decoration: AppTheme.glassCard(borderColor: color, opacity: 0.07),
+                  decoration: AppTheme.premiumCard(accent: color),
                   child: Row(
                     children: [
                       Container(
                         width: 42, height: 42,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: color.withOpacity(0.08),
-                          border: Border.all(color: color.withOpacity(0.25)),
+                          gradient: LinearGradient(
+                            colors: [color.withOpacity(0.15), color.withOpacity(0.05)],
+                          ),
+                          border: Border.all(color: color.withOpacity(0.3)),
+                          boxShadow: [
+                            BoxShadow(color: color.withOpacity(0.15), blurRadius: 8, spreadRadius: -2),
+                          ],
                         ),
                         child: Icon(Icons.menu_book_rounded, color: color.withOpacity(0.7), size: 20),
                       ),

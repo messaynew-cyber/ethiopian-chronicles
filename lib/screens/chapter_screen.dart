@@ -196,17 +196,24 @@ class _ChapterScreenState extends State<ChapterScreen> with TickerProviderStateM
             // Parchment overlay
             Positioned.fill(child: IgnorePointer(child: Container(decoration: AppTheme.parchmentOverlay()))),
 
-            // V2: Reading progress bar (Spotdly-inspired thin gold line)
+            // V2: Premium reading progress bar with glow
             Positioned(
               top: 0, left: 0, right: 0,
               child: SafeArea(
                 bottom: false,
                 child: Container(
-                  height: 2.5,
-                  child: LinearProgressIndicator(
-                    value: _progress,
-                    backgroundColor: Colors.transparent,
-                    valueColor: AlwaysStoppedAnimation<Color>(eraColor.withOpacity(0.7)),
+                  height: 4,
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(color: eraColor.withOpacity(0.4), blurRadius: 6, offset: const Offset(0, 2)),
+                    ],
+                  ),
+                  child: ClipRRect(
+                    child: LinearProgressIndicator(
+                      value: _progress,
+                      backgroundColor: Colors.transparent,
+                      valueColor: AlwaysStoppedAnimation<Color>(eraColor),
+                    ),
                   ),
                 ),
               ),
