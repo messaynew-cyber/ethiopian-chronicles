@@ -130,11 +130,29 @@ class _HomeScreenState extends State<HomeScreen> {
                       : ListView.builder(
                           padding: const EdgeInsets.fromLTRB(20, 8, 20, 20),
                           itemCount: chapters.length,
-                          itemBuilder: (context, index) => _ChapterCard(
-                            chapter: chapters[index],
-                            appState: a,
-                            onTap: () => _openChapter(chapters[index]),
-                          ),
+                          itemBuilder: (context, index) {
+                            // V2: Staggered entrance animation
+                            return TweenAnimationBuilder<double>(
+                              tween: Tween(begin: 0.0, end: 1.0),
+                              duration: Duration(milliseconds: 500 + index * 60),
+                              curve: Curves.easeOutCubic,
+                              builder: (context, value, child) => Opacity(
+                                opacity: value,
+                                child: Transform.translate(
+                                  offset: Offset(0, 30 * (1 - value)),
+                                  child: Transform.scale(
+                                    scale: 0.92 + 0.08 * value,
+                                    child: child,
+                                  ),
+                                ),
+                              ),
+                              child: _ChapterCard(
+                                chapter: chapters[index],
+                                appState: a,
+                                onTap: () => _openChapter(chapters[index]),
+                              ),
+                            );
+                          },
                         ),
                 ),
               ],

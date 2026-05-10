@@ -196,6 +196,29 @@ class _ChapterScreenState extends State<ChapterScreen> with TickerProviderStateM
             // Parchment overlay
             Positioned.fill(child: IgnorePointer(child: Container(decoration: AppTheme.parchmentOverlay()))),
 
+            // V2: Reading progress bar (Spotdly-inspired thin line)
+            Positioned(
+              top: 0, left: 0, right: 0,
+              child: SafeArea(
+                bottom: false,
+                child: AnimatedBuilder(
+                  animation: _scrollController,
+                  builder: (_, __) {
+                    final max = _scrollController.hasClients ? _scrollController.position.maxScrollExtent : 1;
+                    final progress = max > 0 ? (_scrollController.hasClients ? _scrollController.offset / max : 0).clamp(0.0, 1.0) : 0.0;
+                    return Container(
+                      height: 2.5,
+                      child: LinearProgressIndicator(
+                        value: progress,
+                        backgroundColor: Colors.transparent,
+                        valueColor: AlwaysStoppedAnimation<Color>(eraColor.withOpacity(0.7)),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ),
+
             // Main scroll
             CustomScrollView(
               controller: _scrollController,
